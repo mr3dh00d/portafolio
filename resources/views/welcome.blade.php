@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
+        <link rel="stylesheet" href="css/app.css">
         <style>
             html, body {
                 background-color: #fff;
@@ -80,6 +81,7 @@
             @endif
 
             <div class="content">
+                <div id="example"></div>
                 <div class="title m-b-md">
                     Portafolio de Dereck
                 </div>
@@ -96,5 +98,6 @@
                 </div>
             </div>
         </div>
+        <script src="js/app.js"></script>
     </body>
 </html>

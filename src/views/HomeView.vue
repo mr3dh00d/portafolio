@@ -118,5 +118,25 @@ import SkillItem from '@/components/SkillItem.vue';
         <SkillItem skill="Office" level="w-[80%]" imgSrc="https://img.icons8.com/color/64/000000/office-365.png"></SkillItem>
       </div>
     </div>
+    <div id="sobre_mi" class="w-full py-4 px-8 flex flex-col items-center space-y-4">
+      <h2 class="text-3xl text-primary font-righteous text-center">Eduación y Experiencia</h2>
+      <div class="w-full flex flex-col space-y-2 text-white">
+        <div class="w-full p-4 bg-secondary shadow-md border-l-4 border-l-primary rounded-md ">
+          <p class="font-righteous text-lg">
+            Educacion básica y media
+          </p>
+          <p>2007 - 2018</p>
+          <p>Colegio Adventista Las Condes</p>
+        </div>
+        <div class="w-full p-4 bg-secondary shadow-md border-l-4 border-l-primary rounded-md ">
+          <p class="font-righteous text-lg">
+            Educacion superior
+          </p>
+          <p>2019 - Actualidad</p>
+          <p class="font-bold">Ingeniería Civil Informática</p>
+          <p>Universidad Andrés Bello</p>
+        </div>
+      </div>
+    </div>
   </main>
 </template>

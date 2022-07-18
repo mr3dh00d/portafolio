@@ -8,7 +8,9 @@ module.exports = {
     extend: {
       backgroundImage: {
         'photo': "url('@/assets/img/21.Dereck Pavez.jpg')",
-        'fondo': "url('@/assets/img/fondo.png')"
+        'fondo': "url('@/assets/img/fondo.png')",
+        'robotica': "url('@/assets/img/robotica.png')",
+        'feria-cientifica': "url('@/assets/img/feria-cientifica.png')"
       },
       colors:{
         'primary': '#102040',

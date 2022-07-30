@@ -10,7 +10,8 @@ module.exports = {
         'photo': "url('@/assets/img/21.Dereck Pavez.jpg')",
         'fondo': "url('@/assets/img/fondo.png')",
         'robotica': "url('@/assets/img/robotica.png')",
-        'feria-cientifica': "url('@/assets/img/feria-cientifica.png')"
+        'feria-cientifica': "url('@/assets/img/feria-cientifica.png')",
+        'ekos': "url('@/assets/img/ekos.jpg')"
       },
       colors:{
         'primary': '#102040',

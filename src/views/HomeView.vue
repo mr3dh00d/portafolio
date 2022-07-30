@@ -2,6 +2,7 @@
 import PersonalData from '@/components/PersonalData.vue';
 import InterestItem from '@/components/InterestItem.vue';
 import SkillItem from '@/components/SkillItem.vue';
+import Logo from '@/components/Logo.vue';
 </script>
 
 <template>
@@ -176,7 +177,30 @@ import SkillItem from '@/components/SkillItem.vue';
               <span class="text-sm">2018</span>
             </div>
           </div>
+          <div class="w-full h-64 bg-ekos bg-cover bg-left rounded-md" href="https://ekosfusion.cl/" target="_blank">
+            <div class="w-full h-full bg-primary rounded-md bg-opacity-90 p-4 flex flex-col justify-center opacity-0 transition duration-500 ease-in-out hover:opacity-100">
+              <p class="font-bold">Desarrollador web</p>
+              <span class="text-sm">Sitio web con Laravel</span>
+              <span class="text-sm">2020 - 2022</span>
+            </div>
+          </div>
       </div>
     </div>  
+    <div id="proyectos" class="w-full py-4 px-8 flex flex-col items-center space-y-4">
+      <h2 class="text-3xl text-primary font-righteous text-center">Contacto</h2>
+      <form class="w-full flex flex-col space-y-2">
+        <input class="p-2 rounded-md border-2 border-quinary outline-2 outline-secondary focus:outline" type="text" placeholder="Nombre">
+        <input class="p-2 rounded-md border-2 border-quinary outline-2 outline-secondary focus:outline" type="mail" placeholder="Correo de contacto">
+        <textarea class="p-2 rounded-md border-2 border-quinary outline-2 outline-secondary focus:outline" name="" id="" cols="30" rows="6" placeholder="Mensaje"></textarea>
+        <button class="py-2 rounded-md bg-quinary text-white"><i class="fa fa-send mr-2"></i>Enviar</button>
+      </form>
+    </div>
+    <footer class="w-full py-4 p-x8 flex flex-col items-center bg-secondary">
+      <Logo class="w-40 h-40 fill-primary transition duration-300 ease-in-out hover:fill-white"/>
+      <!-- <img class="fill-white" :src="logo" alt="" srcset=""> -->
+      <!-- <div class="w-40 h-40 bg-logo-white bg-cover bg-center"></div> -->
+
+
+    </footer>
   </main>
 </template>

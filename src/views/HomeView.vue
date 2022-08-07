@@ -1,8 +1,18 @@
 <script setup lang="ts">
+import SocialMedia from '@/components/SocialMedia.vue';
 import PersonalData from '@/components/PersonalData.vue';
 import InterestItem from '@/components/InterestItem.vue';
 import SkillItem from '@/components/SkillItem.vue';
 import Logo from '@/components/Logo.vue';
+
+function HandleClick(event : Event) {
+  document.querySelectorAll('#navbar a').forEach((element : Element) => {
+    element.classList.remove('active');
+  });
+  let target = event.currentTarget as Element;
+  target.classList.add('active');
+} 
+
 </script>
 
 <template>
@@ -17,17 +27,12 @@ import Logo from '@/components/Logo.vue';
               <p>Desarrollador Full-Stack</p>
               <p>Estudiante de Ingeniería Civil Informática</p>
             </div>
-            <div id="rrss" class="w-full h-auto space-x-3 pt-1 text-2xl text-primary">
-              <a class="fa fa-instagram transition duration-200 ease-in-out hover:-translate-y-1" href="http://instagram.com/mr3dh00d" target="_blank" rel="noopener noreferrer"></a>
-              <a class="fa fa-twitter transition duration-200 ease-in-out hover:-translate-y-1" href="http://twitter.com/mr3dh00d" target="_blank" rel="noopener noreferrer"></a>
-              <a class="fa fa-linkedin transition duration-200 ease-in-out hover:-translate-y-1" href="http://linkedin.com/in/dereck-pavez/" target="_blank" rel="noopener noreferrer"></a>
-              <a class="fa fa-github transition duration-200 ease-in-out hover:-translate-y-1" href="http://github.com/mr3dh00d" target="_blank" rel="noopener noreferrer"></a>
-            </div>
+            <SocialMedia/>
           </div>
         </div>
       </div>
     </div>
-    <div id="sobre_mi" class="w-full py-4 px-8 flex flex-col items-center space-y-4">
+    <div id="sobre-mi" class="w-full py-4 px-8 flex flex-col items-center space-y-4">
       <h2 class="text-3xl text-primary font-righteous text-center">Sobre mí</h2>
       <p class="text-justify">
         Soy un estudiante destacado, analítico y 
@@ -94,7 +99,7 @@ import Logo from '@/components/Logo.vue';
         </InterestItem>
       </div>
     </div>
-    <div id="sobre_mi" class="w-full py-4 px-8 flex flex-col items-center space-y-4">
+    <div id="habilidades" class="w-full py-4 px-8 flex flex-col items-center space-y-4">
       <h2 class="text-3xl text-primary font-righteous text-center">Habilidades</h2>
       <div class="w-full grid grid-cols-3 grid-flow-row gap-4">
         <SkillItem skill="HTML5" level="w-[90%]" imgSrc="https://img.icons8.com/color/64/000000/html-5.png"></SkillItem>
@@ -148,7 +153,7 @@ import Logo from '@/components/Logo.vue';
           <p class="font-righteous text-lg">
             Ekos Fusión
           </p>
-          <span class="text-sm">Julio 2020 - Enero 2022</span>
+          <span class="text-sm">Julio 2020 - Julio 2022</span>
           <p>Desarrollador web para el sitio del restaurante Ekos Fusión, creando un sistema de compra y ventas online.</p>
         </div>
         <div class="w-full p-4 bg-secondary shadow-md border-l-4 border-l-primary rounded-md ">
@@ -186,7 +191,7 @@ import Logo from '@/components/Logo.vue';
           </div>
       </div>
     </div>  
-    <div id="proyectos" class="w-full py-4 px-8 flex flex-col items-center space-y-4">
+    <div id="contacto" class="w-full py-4 px-8 flex flex-col items-center space-y-4">
       <h2 class="text-3xl text-primary font-righteous text-center">Contacto</h2>
       <form class="w-full flex flex-col space-y-2">
         <input class="p-2 rounded-md border-2 border-quinary outline-2 outline-secondary focus:outline" type="text" placeholder="Nombre">
@@ -195,12 +200,31 @@ import Logo from '@/components/Logo.vue';
         <button class="py-2 rounded-md bg-quinary text-white"><i class="fa fa-send mr-2"></i>Enviar</button>
       </form>
     </div>
-    <footer class="w-full py-4 p-x8 flex flex-col items-center bg-secondary">
+    <footer class="w-full py-4 p-x8 pb-20 flex flex-col items-center bg-secondary text-center">
       <Logo class="w-40 h-40 fill-primary transition duration-300 ease-in-out hover:fill-white"/>
-      <!-- <img class="fill-white" :src="logo" alt="" srcset=""> -->
-      <!-- <div class="w-40 h-40 bg-logo-white bg-cover bg-center"></div> -->
-
-
+      <SocialMedia/>
+      <span class="text-xs">
+      &copy; Dereck Pavez 2022. Todos los derechos reservados.
+      </span>
     </footer>
   </main>
+  <nav id="navbar" class="w-full h-auto flex fixed bottom-0 items-center justify-center py-2">
+    <div class="bg-black bg-opacity-60 bg-blur-sm rounded-full p-2 px-6 flex gap-2 text-lg text-gray-500">
+      <a href="#presentacion" class="rounded-full flex w-12 h-12 items-center justify-center transition duration-200 ease-in-out hover:text-white hover:bg-quaternary" @click="HandleClick">
+        <i class="fa-solid fa-house"></i>
+      </a>
+      <a href="#datos-personales" class="rounded-full flex w-12 h-12 items-center justify-center transition duration-200 ease-in-out hover:text-white hover:bg-quaternary" @click="HandleClick">
+        <i class="fa-solid fa-user"></i>
+      </a>
+      <a href="#habilidades" class="rounded-full flex w-12 h-12 items-center justify-center transition duration-200 ease-in-out hover:text-white hover:bg-quaternary" @click="HandleClick">
+        <i class="fa-solid fa-code"></i>
+      </a>
+      <a href="#educacion-experiencia" class="rounded-full flex w-12 h-12 items-center justify-center transition duration-200 ease-in-out hover:text-white hover:bg-quaternary" @click="HandleClick">
+        <i class="fa-solid fa-book"></i>
+      </a>
+      <a href="#contacto" class="rounded-full flex w-12 h-12 items-center justify-center transition duration-200 ease-in-out hover:text-white hover:bg-quaternary" @click="HandleClick">
+        <i class="fa-solid fa-file-pen"></i>
+      </a>
+    </div>
+  </nav>
 </template>

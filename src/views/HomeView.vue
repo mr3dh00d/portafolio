@@ -13,16 +13,28 @@ function HandleClick(event : Event) {
   target.classList.add('active');
 } 
 
+function HandleDarkMode(event : Event){
+  let target = event.currentTarget as Element;
+  let html = document.getElementsByTagName("html")[0];
+  if(target.classList.contains('active')){
+    html.classList.remove('dark');
+    target.classList.remove('active');
+  }else{
+    html.classList.add('dark');
+    target.classList.add('active');
+  }
+}
+
 </script>
 
 <template>
   <main class="font-montserrat">    
     <div id="presentacion" class="bg-fondo bg-cover bg-center">
-      <div class="py-16 bg-quinary bg-opacity-30">
+      <div class="py-16 bg-quinary bg-opacity-30 dark:bg-primary dark:bg-opacity-30">
         <div id="card" class="flex flex-col items-center">
           <div class="photo w-56 h-56 bg-photo bg-cover rounded-full absolute"></div>
-          <div class="content pt-14 pb-4 px-4 mt-44 bg-white text-center rounded-lg">
-            <h1 class="text-4xl font-righteous text-primary">Dereck Pavez</h1>
+          <div class="content pt-14 pb-4 px-4 mt-44 bg-white text-center rounded-lg dark:bg-primary dark:text-secondary">
+            <h1 class="text-4xl font-righteous text-primary dark:text-white">Dereck Pavez</h1>
             <div id="descripcion" class="text-sm">
               <p>Desarrollador Full-Stack</p>
               <p>Estudiante de Ingeniería Civil Informática</p>
@@ -32,25 +44,23 @@ function HandleClick(event : Event) {
         </div>
       </div>
     </div>
-    <div id="contenido" class="w-full flex flex-col justify-center lg:px-40">
+    <div id="contenido" class="w-full flex flex-col justify-center lg:px-40 dark:bg-primary dark:text-secondary">
       <div id="sobre-mi" class="w-full py-4 px-8 flex flex-col items-center space-y-4">
-        <h2 class="text-3xl text-primary font-righteous text-center">Sobre mí</h2>
+        <h2 class="text-3xl text-primary font-righteous text-center dark:text-white">Sobre mí</h2>
         <p class="text-justify">
-          Soy un estudiante destacado, analítico y 
-          proactivo, de principios claros,
-          carismático y con habilidades de
-          ligerazgo, tales como resolución de
-          conflictos, escucha activa, innovación y
-          creatividad, en mi experiencia he
-          mostrado capacidad para solucionar
-          desafíos informáticos, siempre bucando
-          una nueva formar de mirar y resolver los
-          problemas, con notable perseverancia.
+          Soy un fiel creyente de que el único método de aprendizaje es el auto impartido,
+          creo que uno es quien tiene que dar el máximo para aprender, me gusta siempre
+          estar aprendiendo nuevas tecnologías y soy excelente en ello, tengo una rápida
+          compresión que me permite adaptarme a cualquier nuevo conocimiento y entorno. Me
+          considero a mi mismo una persona responsable y capaz de logar lo que se proponga,
+          cualquiera que sea la meta o trabajo a la que me enfrente siempre lo tomare con
+          calma tiempo, visión y estaré dispuesto a escuchar otros puntos de vista para
+          llegar al objetivo de la mejor manera posible.
         </p>
       </div>
       <div id="informacion-extra" class="md:grid md:grid-cols-2">
         <div id="informacion-personal" class="w-full py-4 px-8 flex flex-col items-center space-y-2">
-          <h3 class="text-2xl text-primary font-righteous">Información personal</h3>
+          <h3 class="text-2xl text-primary font-righteous dark:text-white">Información personal</h3>
           <div class="w-full flex flex-col space-y-2 text-start">
             <PersonalData id="nombre">
               <template #title>Nombre</template>
@@ -71,7 +81,7 @@ function HandleClick(event : Event) {
               <div class="w-full h-auto flex flex-wrap -m-0.5 text-white">
                 <span class="m-0.5 px-2 rounded-md bg-quaternary">Estudiante</span>
                 <span class="m-0.5 px-2 rounded-md bg-tertiary">Freelancer</span>
-                <span class="m-0.5 px-2 rounded-md bg-primary">Backend</span>
+                <span class="m-0.5 px-2 rounded-md bg-primary dark:bg-white dark:text-primary">Backend</span>
                 <span class="m-0.5 px-2 rounded-md bg-secondary">Frontend</span>
                 <span class="m-0.5 px-2 rounded-md bg-quinary">Diseño UI/UX</span>
               </div>
@@ -79,8 +89,8 @@ function HandleClick(event : Event) {
           </div>
         </div>
         <div id="intereses" class="w-full flex flex-col items-center py-4 px-8 space-y-2">
-          <h3 class="text-2xl text-primary font-righteous">Mis intereses</h3>
-          <div class="w-full grid grid-cols-2 grid-flow-row gap-4 text-white">
+          <h3 class="text-2xl text-primary font-righteous dark:text-white">Mis intereses</h3>
+          <div class="w-full grid grid-cols-2 grid-flow-row gap-4 text-white lg:grid-cols-3">
             <InterestItem iconClass="fa-gamepad">
               <p>Videojuegos</p>
             </InterestItem>
@@ -103,8 +113,8 @@ function HandleClick(event : Event) {
         </div>
       </div>
       <div id="habilidades" class="w-full py-4 px-8 flex flex-col items-center space-y-4">
-        <h2 class="text-3xl text-primary font-righteous text-center">Habilidades</h2>
-        <div class="w-full grid grid-cols-3 grid-flow-row gap-4 md:grid-cols-4">
+        <h2 class="text-3xl text-primary font-righteous text-center dark:text-white">Habilidades</h2>
+        <div class="w-full grid grid-cols-3 grid-flow-row gap-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7">
           <SkillItem skill="HTML5" level="w-[90%]" imgSrc="https://img.icons8.com/color/64/000000/html-5.png"></SkillItem>
           <SkillItem skill="CSS3" level="w-[85%]" imgSrc="https://img.icons8.com/color/64/000000/css3.png"></SkillItem>
           <SkillItem skill="Bootstrap" level="w-[85%]" imgSrc="https://img.icons8.com/color/64/000000/bootstrap.png"></SkillItem>
@@ -129,17 +139,17 @@ function HandleClick(event : Event) {
         </div>
       </div>
       <div id="educacion-experiencia" class="w-full py-4 px-8 flex flex-col items-center space-y-4">
-        <h2 class="text-3xl text-primary font-righteous text-center">Eduación y Experiencia</h2>
+        <h2 class="text-3xl text-primary font-righteous text-center dark:text-white">Eduación y Experiencia</h2>
         <div class="w-full flex flex-col gap-2 text-white md:grid md:grid-cols-2">
           <div id="educacion" class="flex flex-col gap-2">
-            <div class="w-full p-4 bg-secondary shadow-md border-r-4 border-r-primary rounded-md ">
+            <div class="w-full p-4 bg-secondary shadow-md border-r-4 border-r-primary rounded-md dark:bg-quinary dark:border-r-secondary">
               <p class="font-righteous text-lg">
                 Educacion básica y media
               </p>
               <span class="text-sm">2007 - 2018</span>
               <p>Colegio Adventista Las Condes</p>
             </div>
-            <div class="w-full p-4 bg-secondary shadow-md border-r-4 border-r-primary rounded-md ">
+            <div class="w-full p-4 bg-secondary shadow-md border-r-4 border-r-primary rounded-md dark:bg-quinary dark:border-r-secondary">
               <p class="font-righteous text-lg">
                 Educacion superior
               </p>
@@ -149,21 +159,21 @@ function HandleClick(event : Event) {
             </div>
           </div>
           <div id="experiencia" class="flex flex-col gap-2">
-            <div class="w-full p-4 bg-secondary shadow-md border-l-4 border-l-primary rounded-md ">
+            <div class="w-full p-4 bg-secondary shadow-md border-l-4 border-l-primary rounded-md dark:bg-quinary dark:border-l-secondary">
               <p class="font-righteous text-lg">
                 GASMAR S.A
               </p>
               <span class="text-sm">Febrero 2020</span>
               <p>Me desarrolle como junior dentro de la empresas, realizando gestiones varias y trámites bancarios.</p>
             </div>
-            <div class="w-full p-4 bg-secondary shadow-md border-l-4 border-l-primary rounded-md ">
+            <div class="w-full p-4 bg-secondary shadow-md border-l-4 border-l-primary rounded-md dark:bg-quinary dark:border-l-secondary">
               <p class="font-righteous text-lg">
                 Ekos Fusión
               </p>
               <span class="text-sm">Julio 2020 - Julio 2022</span>
               <p>Desarrollador web para el sitio del restaurante Ekos Fusión, creando un sistema de compra y ventas online.</p>
             </div>
-            <div class="w-full p-4 bg-secondary shadow-md border-l-4 border-l-primary rounded-md ">
+            <div class="w-full p-4 bg-secondary shadow-md border-l-4 border-l-primary rounded-md dark:bg-quinary dark:border-l-secondary">
               <p class="font-righteous text-lg">
                 VASS
               </p>
@@ -174,8 +184,8 @@ function HandleClick(event : Event) {
         </div>
       </div>  
       <div id="proyectos" class="w-full py-4 px-8 flex flex-col items-center space-y-4">
-        <h2 class="text-3xl text-primary font-righteous text-center">Proyectos</h2>
-        <div class="w-full flex flex-col gap-4 text-white md:grid md:grid-cols-2">
+        <h2 class="text-3xl text-primary font-righteous text-center dark:text-white">Proyectos</h2>
+        <div class="w-full flex flex-col gap-4 text-white md:grid md:grid-cols-2 xl:grid-cols-3">
             <div class="w-full h-64 bg-robotica bg-cover bg-center rounded-md">
               <div class="w-full h-full bg-primary rounded-md bg-opacity-90 p-4 flex flex-col justify-center opacity-0 transition duration-500 ease-in-out hover:opacity-100">
                 <p class="font-bold">Tercer lugar 12° Interescolar de Robotica</p>
@@ -190,7 +200,7 @@ function HandleClick(event : Event) {
                 <span class="text-sm">2018</span>
               </div>
             </div>
-            <div class="w-full h-64 bg-ekos bg-cover bg-left rounded-md col-span-2" href="https://ekosfusion.cl/" target="_blank">
+            <div class="w-full h-64 bg-ekos bg-cover bg-left rounded-md md:col-span-2 xl:col-span-1" href="https://ekosfusion.cl/" target="_blank">
               <div class="w-full h-full bg-primary rounded-md bg-opacity-90 p-4 flex flex-col justify-center opacity-0 transition duration-500 ease-in-out hover:opacity-100">
                 <p class="font-bold">Desarrollador web</p>
                 <span class="text-sm">
@@ -202,19 +212,19 @@ function HandleClick(event : Event) {
         </div>
       </div>  
       <div id="contacto" class="w-full py-4 px-8 flex flex-col items-center space-y-4">
-        <h2 class="text-3xl text-primary font-righteous text-center">Contacto</h2>
-        <form class="w-full flex flex-col space-y-2">
-          <input class="p-2 rounded-md border-2 border-quinary outline-2 outline-secondary focus:outline" type="text" placeholder="Nombre">
-          <input class="p-2 rounded-md border-2 border-quinary outline-2 outline-secondary focus:outline" type="mail" placeholder="Correo de contacto">
-          <textarea class="p-2 rounded-md border-2 border-quinary outline-2 outline-secondary focus:outline" name="" id="" cols="30" rows="6" placeholder="Mensaje"></textarea>
-          <button class="py-2 rounded-md bg-quinary text-white"><i class="fa fa-send mr-2"></i>Enviar</button>
+        <h2 class="text-3xl text-primary font-righteous text-center dark:text-white">Contacto</h2>
+        <form class="w-full flex flex-col gap-2 dark:text-white">
+          <input class="p-2 rounded-md border-2 border-quinary outline-2 outline-secondary focus:outline dark:bg-transparent dark:border-tertiary" type="text" placeholder="Nombre">
+          <input class="p-2 rounded-md border-2 border-quinary outline-2 outline-secondary focus:outline dark:bg-transparent dark:border-tertiary" type="mail" placeholder="Correo de contacto">
+          <textarea class="p-2 rounded-md border-2 border-quinary outline-2 outline-secondary focus:outline dark:bg-transparent dark:border-tertiary" name="" id="" cols="30" rows="6" placeholder="Mensaje"></textarea>
+          <button class="py-2 rounded-md bg-quinary text-white transition duration-200 ease-in-out hover:bg-tertiary"><i class="fa fa-send mr-2"></i>Enviar</button>
         </form>
       </div>
     </div>
-    <footer class="w-full py-4 p-x8 pb-20 flex flex-col items-center bg-secondary text-center lg:px-40">
-      <Logo class="w-40 h-40 fill-primary transition duration-300 ease-in-out hover:fill-white"/>
+    <footer class="w-full py-4 p-x8 pb-20 flex flex-col items-center bg-secondary text-center lg:px-40 dark:bg-quaternary">
+      <Logo class="w-40 h-40 fill-primary transition duration-300 ease-in-out hover:fill-white dark:fill-white dark:hover:fill-gray-300"/>
       <SocialMedia/>
-      <span class="text-xs">
+      <span class="text-xs dark:text-secondary">
       &copy; Dereck Pavez 2022. Todos los derechos reservados.
       </span>
     </footer>
@@ -236,6 +246,9 @@ function HandleClick(event : Event) {
       <a href="#contacto" class="rounded-full flex w-12 h-12 items-center justify-center transition duration-200 ease-in-out hover:text-white hover:bg-quaternary" @click="HandleClick">
         <i class="fa-solid fa-file-pen"></i>
       </a>
+      <div class="rounded-full flex w-12 h-12 items-center justify-center transition duration-200 ease-in-out hover:text-white hover:bg-quaternary" @click="HandleDarkMode">
+        <i class="fa-solid fa-moon"></i>
+      </div>
     </div>
   </nav>
 </template>

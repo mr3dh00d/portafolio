@@ -12,7 +12,8 @@ module.exports = {
         'fondo': "url('@/assets/img/fondo.png')",
         'robotica': "url('@/assets/img/robotica.png')",
         'feria-cientifica': "url('@/assets/img/feria-cientifica.png')",
-        'ekos': "url('@/assets/img/ekos.jpg')"
+        'ekos': "url('@/assets/img/ekos.jpeg')",
+        'graph-kigdom': "url('@/assets/img/graph-kingdom.png')"
       },
       colors:{
         'primary': '#102040',

@@ -14,10 +14,6 @@ dist-ssr
 coverage
 *.local
 
-#Imgenes
-**/*.png
-**/*.jpg
-
 /cypress/videos/
 /cypress/screenshots/
 

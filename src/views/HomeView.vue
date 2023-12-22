@@ -1,9 +1,15 @@
 <script setup lang="ts">
+import AboutMe from '@/components/Home/AboutMe.vue';
+import MoreInformation from '@/components/Home/MoreInformation.vue';
+import Skills from '@/components/Home/Skills.vue';
+import EducationAndExperiences from '@/components/Home/EducationAndExperiences.vue';
+import Projects from '@/components/Home/Projects.vue';
+
+
 import SocialMedia from '@/components/SocialMedia.vue';
-import PersonalData from '@/components/PersonalData.vue';
-import InterestItem from '@/components/InterestItem.vue';
-import SkillItem from '@/components/SkillItem.vue';
 import Logo from '@/components/Logo.vue';
+import Contact from '@/components/Home/Contact.vue';
+
 
 function HandleClick(event : Event) {
   document.querySelectorAll('#navbar a').forEach((element : Element) => {
@@ -32,12 +38,14 @@ function HandleDarkMode(event : Event){
     <div id="presentacion" class="bg-fondo bg-cover bg-center">
       <div class="py-16 bg-quinary bg-opacity-30 dark:bg-primary dark:bg-opacity-30">
         <div id="card" class="flex flex-col items-center">
-          <div class="photo w-56 h-56 bg-photo bg-cover rounded-full absolute"></div>
-          <div class="content pt-14 pb-4 px-4 mt-44 bg-white text-center rounded-lg dark:bg-primary dark:text-secondary">
+          <div class="photo w-56 h-56 bg-photo bg-cover rounded-full absolute">
+            <img src="" alt="">
+          </div>
+          <div class="content md:w-72 lg:w-96 pt-14 pb-4 px-4 mt-44 bg-white text-center rounded-lg dark:bg-primary dark:text-secondary">
             <h1 class="text-4xl font-righteous text-primary dark:text-white">Dereck Pavez</h1>
             <div id="descripcion" class="text-sm">
               <p>Desarrollador Full-Stack</p>
-              <p>Estudiante de Ingeniería Civil Informática</p>
+              <p>Ingeniero Civil en Informática</p>
             </div>
             <SocialMedia/>
           </div>
@@ -46,193 +54,24 @@ function HandleDarkMode(event : Event){
     </div>
     <div id="contenido" class="w-full flex flex-col justify-center items-center lg:px-40 dark:bg-primary dark:text-secondary">
       <div class="max-w-screen-xl">
-        <div id="sobre-mi" class="w-full py-4 px-8 flex flex-col items-center space-y-4">
-          <h2 class="text-3xl text-primary font-righteous text-center dark:text-white">Sobre mí</h2>
-          <p class="text-justify">
-            Soy un fiel creyente de que el único método de aprendizaje es el auto impartido,
-            creo que uno es quien tiene que dar el máximo para aprender, me gusta siempre
-            estar aprendiendo nuevas tecnologías y soy excelente en ello, tengo una rápida
-            compresión que me permite adaptarme a cualquier nuevo conocimiento y entorno. Me
-            considero a mi mismo una persona responsable y capaz de logar lo que se proponga,
-            cualquiera que sea la meta o trabajo a la que me enfrente siempre lo tomare con
-            calma tiempo, visión y estaré dispuesto a escuchar otros puntos de vista para
-            llegar al objetivo de la mejor manera posible.
-          </p>
-        </div>
-        <div id="informacion-extra" class="md:grid md:grid-cols-2">
-          <div id="informacion-personal" class="w-full py-4 px-8 flex flex-col items-center space-y-2">
-            <h3 class="text-2xl text-primary font-righteous dark:text-white">Información personal</h3>
-            <div class="w-full flex flex-col space-y-2 text-start">
-              <PersonalData id="nombre">
-                <template #title>Nombre</template>
-                <p>Dereck Pavez Arias</p>
-              </PersonalData>
-              <PersonalData id="edad">
-                <template #title>Edad</template>
-                <p>21 años</p>
-              </PersonalData>
-              <PersonalData id="correo">
-                <template #title>Correo</template>
-                <a href="mailto:derek.pavez@outlook.com" class="transitio ease-in-out duration-200 hover:text-secondary">
-                  dereck.pavez@outlook.com
-                </a>
-              </PersonalData>
-              <PersonalData id="ocupacion">
-                <template #title>Ocupación</template>
-                <div class="w-full h-auto flex flex-wrap -m-0.5 text-white">
-                  <span class="m-0.5 px-2 rounded-md bg-quaternary">Estudiante</span>
-                  <span class="m-0.5 px-2 rounded-md bg-tertiary">Freelancer</span>
-                  <span class="m-0.5 px-2 rounded-md bg-primary dark:bg-white dark:text-primary">Backend</span>
-                  <span class="m-0.5 px-2 rounded-md bg-secondary">Frontend</span>
-                  <span class="m-0.5 px-2 rounded-md bg-quinary">Diseño UI/UX</span>
-                </div>
-              </PersonalData>
-            </div>
-          </div>
-          <div id="intereses" class="w-full flex flex-col items-center py-4 px-8 space-y-2">
-            <h3 class="text-2xl text-primary font-righteous dark:text-white">Mis intereses</h3>
-            <div class="w-full grid grid-cols-2 grid-flow-row gap-4 text-white lg:grid-cols-3">
-              <InterestItem iconClass="fa-gamepad">
-                <p>Videojuegos</p>
-              </InterestItem>
-              <InterestItem iconClass="fa-headphones-simple">
-                <p>Música</p>
-              </InterestItem>
-              <InterestItem iconClass="fa-clapperboard">
-                <p>Cine</p>
-              </InterestItem>
-              <InterestItem iconClass="fa-plane-departure">
-                <p>Viajar</p>
-              </InterestItem>
-              <InterestItem iconClass="fa-basketball">
-                <p>Basketball</p>
-              </InterestItem>
-              <InterestItem iconClass="fa-code">
-                <p>Código</p>
-              </InterestItem>
-            </div>
-          </div>
-        </div>
-        <div id="habilidades" class="w-full py-4 px-8 flex flex-col items-center space-y-4">
-          <h2 class="text-3xl text-primary font-righteous text-center dark:text-white">Habilidades</h2>
-          <div class="w-full grid grid-cols-3 grid-flow-row gap-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7">
-            <SkillItem skill="HTML5" level="w-[90%]" imgSrc="https://img.icons8.com/color/64/000000/html-5.png"></SkillItem>
-            <SkillItem skill="CSS3" level="w-[85%]" imgSrc="https://img.icons8.com/color/64/000000/css3.png"></SkillItem>
-            <SkillItem skill="Bootstrap" level="w-[85%]" imgSrc="https://img.icons8.com/color/64/000000/bootstrap.png"></SkillItem>
-            <SkillItem skill="TailwindCSS" level="w-[65%]" imgSrc="https://img.icons8.com/color/64/000000/tailwindcss.png"></SkillItem>
-            <SkillItem skill="JavaScript" level="w-[80%]" imgSrc="https://img.icons8.com/color/64/000000/javascript.png"></SkillItem>
-            <SkillItem skill="TypeScript" level="w-[40%]" imgSrc="https://img.icons8.com/color/64/000000/typescript.png"></SkillItem>
-            <SkillItem skill="ReactJS" level="w-[50%]" imgSrc="https://img.icons8.com/color/64/000000/react-native.png"></SkillItem>
-            <SkillItem skill="VueJS" level="w-[65%]" imgSrc="https://img.icons8.com/color/64/000000/vue-js.png"></SkillItem>
-            <SkillItem skill="NodeJS" level="w-[50%]" imgSrc="https://img.icons8.com/color/64/000000/nodejs.png"></SkillItem>
-            <SkillItem skill="MongoDB" level="w-[40%]" imgSrc="https://img.icons8.com/color/64/000000/mongodb.png"></SkillItem>
-            <SkillItem skill="PHP" level="w-[85%]" imgSrc="https://img.icons8.com/offices/64/000000/php-logo.png"></SkillItem>
-            <SkillItem skill="laravel" level="w-[75%]" imgSrc="https://img.icons8.com/ios-filled/64/fa314a/laravel.png"></SkillItem>
-            <SkillItem skill="MySQL" level="w-[90%]" imgSrc="https://img.icons8.com/color/64/000000/mysql-logo.png"></SkillItem>
-            <SkillItem skill="Git" level="w-[95%]" imgSrc="https://img.icons8.com/color/64/000000/git.png"></SkillItem>
-            <SkillItem skill="Github" level="w-[80%]" imgSrc="https://img.icons8.com/color/64/000000/github.png"></SkillItem>
-            <SkillItem skill="Python" level="w-[80%]" imgSrc="https://img.icons8.com/color/64/000000/python.png"></SkillItem>
-            <SkillItem skill="C" level="w-[40%]" imgSrc="https://img.icons8.com/color/64/000000/c-programming.png"></SkillItem>
-            <SkillItem skill="Linux" level="w-[70%]" imgSrc="https://img.icons8.com/color/64/000000/linux.png"></SkillItem>
-            <SkillItem skill="Figma" level="w-[70%]" imgSrc="https://img.icons8.com/color/64/000000/figma.png"></SkillItem>
-            <SkillItem skill="VSCode" level="w-[90%]" imgSrc="https://img.icons8.com/color/64/000000/visual-studio-code-2019.png"></SkillItem>
-            <SkillItem skill="Office" level="w-[80%]" imgSrc="https://img.icons8.com/color/64/000000/office-365.png"></SkillItem>
-          </div>
-        </div>
-        <div id="educacion-experiencia" class="w-full py-4 px-8 flex flex-col items-center space-y-4">
-          <h2 class="text-3xl text-primary font-righteous text-center dark:text-white">Eduación y Experiencia</h2>
-          <div class="w-full flex flex-col gap-2 text-white md:grid md:grid-cols-2">
-            <div id="educacion" class="flex flex-col gap-2">
-              <div class="w-full p-4 bg-secondary shadow-md border-r-4 border-r-primary rounded-md dark:bg-quinary dark:border-r-secondary">
-                <p class="font-righteous text-lg">
-                  Educacion básica y media
-                </p>
-                <span class="text-sm">2007 - 2018</span>
-                <p>Colegio Adventista Las Condes</p>
-              </div>
-              <div class="w-full p-4 bg-secondary shadow-md border-r-4 border-r-primary rounded-md dark:bg-quinary dark:border-r-secondary">
-                <p class="font-righteous text-lg">
-                  Educacion superior
-                </p>
-                <span class="text-sm">2019 - Actualidad</span>
-                <p class="font-bold">Ingeniería Civil Informática</p>
-                <p>Universidad Andrés Bello</p>
-              </div>
-            </div>
-            <div id="experiencia" class="flex flex-col gap-2">
-              <div class="w-full p-4 bg-secondary shadow-md border-l-4 border-l-primary rounded-md dark:bg-quinary dark:border-l-secondary">
-                <p class="font-righteous text-lg">
-                  GASMAR S.A
-                </p>
-                <span class="text-sm">Febrero 2020</span>
-                <p>Me desarrolle como junior dentro de la empresas, realizando gestiones varias y trámites bancarios.</p>
-              </div>
-              <div class="w-full p-4 bg-secondary shadow-md border-l-4 border-l-primary rounded-md dark:bg-quinary dark:border-l-secondary">
-                <p class="font-righteous text-lg">
-                  Ekos Fusión
-                </p>
-                <span class="text-sm">Julio 2020 - Julio 2022</span>
-                <p>Desarrollador web para el sitio del restaurante Ekos Fusión, creando un sistema de compra y ventas online.</p>
-              </div>
-              <div class="w-full p-4 bg-secondary shadow-md border-l-4 border-l-primary rounded-md dark:bg-quinary dark:border-l-secondary">
-                <p class="font-righteous text-lg">
-                  VASS
-                </p>
-                <span class="text-sm">Enero 2021 - Febrero 2021</span>
-                <p>Me desarrolle en el área de Integration & Process, utilizando Oracle WebLogic, Oracle Service Bus (OSB) y Servicios Web SOAP.</p>
-              </div>
-            </div>
-          </div>
-        </div>  
-        <div id="proyectos" class="w-full py-4 px-8 flex flex-col items-center space-y-4">
-          <h2 class="text-3xl text-primary font-righteous text-center dark:text-white">Proyectos</h2>
-          <div class="w-full flex flex-col gap-4 text-white md:grid md:grid-cols-2 xl:grid-cols-3">
-              <div class="w-full h-64 bg-robotica bg-cover bg-center rounded-md">
-                <div class="w-full h-full bg-primary rounded-md bg-opacity-90 p-4 flex flex-col justify-center opacity-0 transition duration-500 ease-in-out hover:opacity-100">
-                  <p class="font-bold">Tercer lugar 12° Interescolar de Robotica</p>
-                  <span class="text-sm">Universidad Andrés Bello</span>
-                  <span class="text-sm">2018</span>
-                </div>
-              </div>
-              <div class="w-full h-64 bg-feria-cientifica bg-cover bg-center rounded-md">
-                <div class="w-full h-full bg-primary rounded-md bg-opacity-90 p-4 flex flex-col justify-center opacity-0 transition duration-500 ease-in-out hover:opacity-100">
-                  <p class="font-bold">Segundo lugar Nacional 7° Feria Científica Tecnológica</p>
-                  <span class="text-sm">Educación Adventista</span>
-                  <span class="text-sm">2018</span>
-                </div>
-              </div>
-              <div class="w-full h-64 bg-ekos bg-cover bg-left rounded-md md:col-span-2 xl:col-span-1" href="https://ekosfusion.cl/" target="_blank">
-                <div class="w-full h-full bg-primary rounded-md bg-opacity-90 p-4 flex flex-col justify-center opacity-0 transition duration-500 ease-in-out hover:opacity-100">
-                  <p class="font-bold">Desarrollador web</p>
-                  <span class="text-sm">
-                    Sitio web de <a href="http://ekosfusion.cl/" target="_blank" class="underline">ekosfusion.cl</a>
-                  </span>
-                  <span class="text-sm">2020 - 2022</span>
-                </div>
-              </div>
-          </div>
-        </div>  
-        <div id="contacto" class="w-full py-4 px-8 flex flex-col items-center space-y-4">
-          <h2 class="text-3xl text-primary font-righteous text-center dark:text-white">Contacto</h2>
-          <form class="w-full flex flex-col gap-2 dark:text-white">
-            <input class="p-2 rounded-md border-2 border-quinary outline-2 outline-secondary focus:outline dark:bg-transparent dark:border-tertiary" type="text" placeholder="Nombre">
-            <input class="p-2 rounded-md border-2 border-quinary outline-2 outline-secondary focus:outline dark:bg-transparent dark:border-tertiary" type="mail" placeholder="Correo de contacto">
-            <textarea class="p-2 rounded-md border-2 border-quinary outline-2 outline-secondary focus:outline dark:bg-transparent dark:border-tertiary" name="" id="" cols="30" rows="6" placeholder="Mensaje"></textarea>
-            <button class="py-2 rounded-md bg-quinary text-white transition duration-200 ease-in-out hover:bg-tertiary"><i class="fa fa-send mr-2"></i>Enviar</button>
-          </form>
-        </div>
+        <AboutMe/>
+        <MoreInformation/>
+        <Skills/>
+        <EducationAndExperiences/>
+        <Projects/>
+        <Contact/>
       </div>
     </div>
-    <footer class="w-full py-4 p-x8 pb-20 flex flex-col items-center bg-secondary text-center lg:px-40 dark:bg-quaternary">
+    <footer class="w-full py-4 p-x8 pb-24 flex flex-col items-center bg-secondary text-center lg:px-40 dark:bg-quaternary">
       <Logo class="w-40 h-40 fill-primary transition duration-300 ease-in-out hover:fill-white dark:fill-white dark:hover:fill-gray-300"/>
       <SocialMedia/>
-      <span class="text-xs dark:text-secondary">
+      <span class="mt-2 text-xs dark:text-secondary">
       &copy; Dereck Pavez 2022. Todos los derechos reservados.
       </span>
     </footer>
   </main>
-  <nav id="navbar" class="w-full h-auto flex fixed bottom-0 items-center justify-center py-2">
-    <div class="bg-black bg-opacity-60 bg-blur-sm rounded-full p-2 px-6 flex gap-2 text-lg text-gray-500">
+  <nav id="navbar" class="w-full h-auto flex fixed bottom-0 items-center justify-center py-2 md:pb-6">
+    <div class="bg-black bg-opacity-60 backdrop-blur-md rounded-full p-2 px-6 flex gap-2 text-lg text-gray-500">
       <a href="#presentacion" class="active rounded-full flex w-12 h-12 items-center justify-center transition duration-200 ease-in-out hover:text-white hover:bg-quaternary" @click="HandleClick">
         <i class="fa-solid fa-house"></i>
       </a>
@@ -246,9 +85,9 @@ function HandleDarkMode(event : Event){
         <i class="fa-solid fa-book"></i>
       </a>
       <a href="#contacto" class="rounded-full flex w-12 h-12 items-center justify-center transition duration-200 ease-in-out hover:text-white hover:bg-quaternary" @click="HandleClick">
-        <i class="fa-solid fa-file-pen"></i>
+        <i class="fa-solid fa-phone"></i>
       </a>
-      <div class="rounded-full flex w-12 h-12 items-center justify-center transition duration-200 ease-in-out hover:text-white hover:bg-quaternary" @click="HandleDarkMode">
+      <div class="rounded-full flex w-12 h-12 items-center justify-center transition duration-200 ease-in-out hover:text-white hover:bg-quaternary active" @click="HandleDarkMode">
         <i class="fa-solid fa-moon"></i>
       </div>
     </div>

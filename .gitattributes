@@ -1,2 +1,5 @@
 *.png filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
+dist/**/*.js filter=lfs diff=lfs merge=lfs -text
+dist/**/*.css filter=lfs diff=lfs merge=lfs -text
+dist/**/*.html filter=lfs diff=lfs merge=lfs -text

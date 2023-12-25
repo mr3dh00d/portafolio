@@ -8,12 +8,12 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'photo': "url('@/assets/img/21.Dereck Pavez.jpg')",
-        'fondo': "url('@/assets/img/fondo.png')",
-        'robotica': "url('@/assets/img/robotica.png')",
-        'feria-cientifica': "url('@/assets/img/feria-cientifica.png')",
+        'photo': "url('@/assets/img/dereck_pavez.jpeg')",
+        'fondo': "url('@/assets/img/fondo.jpeg')",
+        'robotica': "url('@/assets/img/robotica.jpeg')",
+        'feria-cientifica': "url('@/assets/img/feria-cientifica.jpeg')",
         'ekos': "url('@/assets/img/ekos.jpeg')",
-        'graph-kigdom': "url('@/assets/img/graph-kingdom.png')"
+        'graph-kigdom': "url('@/assets/img/graph-kingdom.jpeg')"
       },
       colors:{
         'primary': '#102040',

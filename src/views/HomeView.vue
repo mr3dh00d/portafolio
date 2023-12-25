@@ -70,24 +70,24 @@ function HandleDarkMode(event : Event){
       </span>
     </footer>
   </main>
-  <nav id="navbar" class="w-full h-auto flex fixed bottom-0 items-center justify-center py-2 md:pb-6">
-    <div class="bg-black bg-opacity-60 backdrop-blur-md rounded-full p-2 px-6 flex gap-2 text-lg text-gray-500">
-      <a href="#presentacion" class="active rounded-full flex w-12 h-12 items-center justify-center transition duration-200 ease-in-out hover:text-white hover:bg-quaternary" @click="HandleClick">
+  <nav id="navbar" class="w-full h-auto flex fixed bottom-0 items-center justify-center pb-6">
+    <div class="bg-black bg-opacity-60 backdrop-blur-md rounded-full p-2 px-6 flex gap-4 text-sm text-gray-500">
+      <a href="#presentacion" class="active rounded-full flex w-10 h-10 items-center justify-center transition-all duration-300 ease-in-out hover:text-white hover:bg-quaternary" @click="HandleClick">
         <i class="fa-solid fa-house"></i>
       </a>
-      <a href="#informacion-personal" class="rounded-full flex w-12 h-12 items-center justify-center transition duration-200 ease-in-out hover:text-white hover:bg-quaternary" @click="HandleClick">
+      <a href="#informacion-personal" class="rounded-full flex w-10 h-10 items-center justify-center transition-all duration-300 ease-in-out hover:text-white hover:bg-quaternary" @click="HandleClick">
         <i class="fa-solid fa-user"></i>
       </a>
-      <a href="#habilidades" class="rounded-full flex w-12 h-12 items-center justify-center transition duration-200 ease-in-out hover:text-white hover:bg-quaternary" @click="HandleClick">
+      <a href="#habilidades" class="rounded-full flex w-10 h-10 items-center justify-center transition-all duration-300 ease-in-out hover:text-white hover:bg-quaternary" @click="HandleClick">
         <i class="fa-solid fa-code"></i>
       </a>
-      <a href="#educacion-experiencia" class="rounded-full flex w-12 h-12 items-center justify-center transition duration-200 ease-in-out hover:text-white hover:bg-quaternary" @click="HandleClick">
+      <a href="#educacion-experiencia" class="rounded-full flex w-10 h-10 items-center justify-center transition-all duration-300 ease-in-out hover:text-white hover:bg-quaternary" @click="HandleClick">
         <i class="fa-solid fa-book"></i>
       </a>
-      <a href="#contacto" class="rounded-full flex w-12 h-12 items-center justify-center transition duration-200 ease-in-out hover:text-white hover:bg-quaternary" @click="HandleClick">
+      <a href="#contacto" class="rounded-full flex w-10 h-10 items-center justify-center transition-all duration-300 ease-in-out hover:text-white hover:bg-quaternary" @click="HandleClick">
         <i class="fa-solid fa-phone"></i>
       </a>
-      <div class="rounded-full flex w-12 h-12 items-center justify-center transition duration-200 ease-in-out hover:text-white hover:bg-quaternary active" @click="HandleDarkMode">
+      <div class="rounded-full flex w-10 h-10 items-center justify-center transition-all duration-300 ease-in-out hover:text-white hover:bg-quaternary active" @click="HandleDarkMode">
         <i class="fa-solid fa-moon"></i>
       </div>
     </div>

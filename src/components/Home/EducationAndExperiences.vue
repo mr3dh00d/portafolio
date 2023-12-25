@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import logoUniversidad from '@/assets/img/logo-unab.jpg';
-import logoEscuela from '@/assets/img/educacion-adventista.png';
-import logoGasmar from '@/assets/img/gasmar-logo.jpg';
-import logoEkos from '@/assets/img/logo-ekos.png';
-import logoVass from '@/assets/img/vass-logo.jpg';
-import logoChapapp from '@/assets/img/chapapp-logo.jpg';
+import logoUniversidad from '@/assets/img/logo-unab.jpeg';
+import logoEscuela from '@/assets/img/educacion-adventista.jpeg';
+import logoGasmar from '@/assets/img/gasmar-logo.jpeg';
+import logoEkos from '@/assets/img/logo-ekos.jpeg';
+import logoVass from '@/assets/img/vass-logo.jpeg';
+import logoChapapp from '@/assets/img/chapapp-logo.jpeg';
 </script>
 
 <template>
@@ -120,7 +120,7 @@ import logoChapapp from '@/assets/img/chapapp-logo.jpg';
                 </div>
                 <p>Me desarrolle en el área de Integration & Process, utilizando Oracle WebLogic, Oracle Service Bus (OSB) y Servicios Web SOAP.</p>
             </div>
-            <div class="col-span-3 w-full p-4 bg-secondary shadow-md border-l-4 border-l-primary rounded-md dark:bg-quinary dark:border-l-secondary">
+            <div class="md:col-span-3 w-full p-4 bg-secondary shadow-md border-l-4 border-l-primary rounded-md dark:bg-quinary dark:border-l-secondary">
                 <div class="flex gap-4">
                     <div class="flex flex-col justify-center items-center">
                         <img :src="logoChapapp" class="rounded-full" width="60" height="60" alt="Logo de la empresa Chapapp">

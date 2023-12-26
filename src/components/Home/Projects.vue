@@ -19,18 +19,19 @@
                     <span class="text-sm">2018</span>
                 </div>
             </div> -->
-            <a class="w-full h-64 bg-graph-kigdom bg-cover bg-center rounded-md" target="_blank" href="https://github.com/mr3dh00d/graph-kingdom">
+            <div class="w-full h-64 bg-graph-kigdom bg-cover bg-center rounded-md">
                 <div class="w-full h-full bg-primary rounded-md bg-opacity-90 p-4 flex flex-col justify-center opacity-0 transition duration-500 ease-in-out hover:opacity-100">
-                    <p class="font-bold">Proyecto de Título: Videojuego educativo sobre grafos y el algoritmo Dijkstra</p>
+                    <p class="font-bold">Proyecto de Título: Videojuego educativo sobre grafos y el algoritmo Dijkstra denominado</p>
                     <span class="text-sm">Universidad Andrés Bello</span>
+                    <a class="text-sm underline" target="_blank" href="https://github.com/mr3dh00d/graph-kingdom">Repositorio</a>
                     <span class="text-sm">2023</span>
                 </div>
-            </a>
+            </div>
             <div class="w-full h-64 bg-ekos bg-cover bg-left rounded-md md:col-span-2 xl:col-span-1" href="https://ekosfusion.cl/" target="_blank">
                 <div class="w-full h-full bg-primary rounded-md bg-opacity-90 p-4 flex flex-col justify-center opacity-0 transition duration-500 ease-in-out hover:opacity-100">
                     <p class="font-bold">Desarrollador web</p>
                     <span class="text-sm">
-                    Sitio web de <a href="http://ekosfusion.cl/" target="_blank" class="underline">ekosfusion.cl</a>
+                    Sitio web de <a href="https://ekosfusion.cl/" target="_blank" class="underline">ekosfusion.cl</a>
                     </span>
                     <span class="text-sm">2020 - 2022</span>
                 </div>

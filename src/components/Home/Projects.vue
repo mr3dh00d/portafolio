@@ -27,7 +27,7 @@
                     <span class="text-sm">2023</span>
                 </div>
             </div>
-            <div class="w-full h-64 bg-ekos bg-cover bg-left rounded-md md:col-span-2 xl:col-span-1" href="https://ekosfusion.cl/" target="_blank">
+            <div class="w-full h-64 bg-ekos bg-cover bg-left rounded-md md:col-span-2 xl:col-span-1" href="https://ekosfusion.cl/carta" target="_blank">
                 <div class="w-full h-full bg-primary rounded-md bg-opacity-90 p-4 flex flex-col justify-center opacity-0 transition duration-500 ease-in-out hover:opacity-100">
                     <p class="font-bold">Desarrollador web</p>
                     <span class="text-sm">

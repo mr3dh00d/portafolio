@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <div id="proyectos" class="w-full py-4 px-8 flex flex-col items-center space-y-4">
+    <div id="proyectos" class="w-full my-4 px-8 flex flex-col items-center space-y-4">
         <h2 class="text-3xl text-primary font-righteous text-center dark:text-white">Proyectos</h2>
         <div class="w-full flex flex-col gap-4 text-white md:grid md:grid-cols-2 xl:grid-cols-3">
             <div class="w-full h-64 bg-robotica bg-cover bg-center rounded-md">

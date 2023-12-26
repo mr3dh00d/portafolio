@@ -38,10 +38,8 @@ function HandleDarkMode(event : Event){
     <div id="presentacion" class="bg-fondo bg-cover bg-center">
       <div class="py-16 bg-quinary bg-opacity-30 dark:bg-primary dark:bg-opacity-30">
         <div id="card" class="flex flex-col items-center">
-          <div class="photo w-56 h-56 bg-photo bg-cover rounded-full absolute">
-            <img src="" alt="">
-          </div>
-          <div class="content md:w-72 lg:w-96 pt-14 pb-4 px-4 mt-44 bg-white text-center rounded-lg dark:bg-primary dark:text-secondary">
+          <div class="photo w-56 h-56 bg-photo bg-cover rounded-full absolute"></div>
+          <div class="content md:w-72 lg:w-96 pt-14 pb-4 px-16 mt-44 bg-white text-center rounded-xl dark:bg-primary dark:text-secondary">
             <h1 class="text-4xl font-righteous text-primary dark:text-white">Dereck Pavez</h1>
             <div id="descripcion" class="text-sm">
               <p>Desarrollador Full-Stack</p>
@@ -52,7 +50,7 @@ function HandleDarkMode(event : Event){
         </div>
       </div>
     </div>
-    <div id="contenido" class="w-full flex flex-col justify-center items-center lg:px-40 dark:bg-primary dark:text-secondary">
+    <div id="contenido" class="w-full flex flex-col justify-center items-center dark:bg-primary dark:text-secondary">
       <div class="max-w-screen-xl">
         <AboutMe/>
         <MoreInformation/>
@@ -62,7 +60,7 @@ function HandleDarkMode(event : Event){
         <Contact/>
       </div>
     </div>
-    <footer class="w-full py-4 p-x8 pb-24 flex flex-col items-center bg-secondary text-center lg:px-40 dark:bg-quaternary">
+    <footer class="w-full py-4 p-x8 pb-24 flex flex-col items-center bg-secondary text-center dark:bg-quaternary">
       <Logo class="w-40 h-40 fill-primary transition duration-300 ease-in-out hover:fill-white dark:fill-white dark:hover:fill-gray-300"/>
       <SocialMedia/>
       <span class="mt-2 text-xs dark:text-secondary">

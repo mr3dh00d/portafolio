@@ -3,7 +3,7 @@ import SkillItem from '@/components/SkillItem.vue';
 </script>
 
 <template>
-    <div id="habilidades" class="w-full py-4 px-8 flex flex-col items-center space-y-4">
+    <div id="habilidades" class="w-full my-4 px-8 flex flex-col items-center space-y-4">
           <h2 class="text-3xl text-primary font-righteous text-center dark:text-white">Habilidades</h2>
           <div class="w-full grid grid-cols-3 grid-flow-row gap-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7">
             <SkillItem skill="HTML5" level="w-[90%]" imgSrc="https://img.icons8.com/color/64/000000/html-5.png"></SkillItem>

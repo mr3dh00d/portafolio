@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <div id="sobre-mi" class="w-full py-4 px-8 flex flex-col items-center space-y-4">
+    <div id="sobre-mi" class="w-full my-4 px-8 flex flex-col items-center space-y-4">
           <h2 class="text-3xl text-primary font-righteous text-center dark:text-white">Sobre mí</h2>
           <p class="text-justify">
             Soy un fiel creyente de que el único método de aprendizaje es el auto impartido,

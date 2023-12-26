@@ -8,7 +8,7 @@ import logoChapapp from '@/assets/img/chapapp-logo.jpeg';
 </script>
 
 <template>
-    <div id="educacion-experiencia" class="w-full py-4 px-8 text-white flex flex-col items-center space-y-4">
+    <div id="educacion-experiencia" class="w-full my-4 px-8 text-white flex flex-col items-center space-y-4">
 
         <h2 class="text-3xl text-primary font-righteous text-center dark:text-white">Educación</h2>
 
@@ -61,16 +61,17 @@ import logoChapapp from '@/assets/img/chapapp-logo.jpeg';
 
         <h2 class="text-3xl text-primary font-righteous text-center dark:text-white">Experiencia</h2>
 
-        <div id="experiencia" class="grid grid-cols-1 md:grid-cols-3 gap-2">
+        <div id="experiencia" class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2">
             <div class="w-full p-4 bg-secondary shadow-md border-l-4 border-l-primary rounded-md dark:bg-quinary dark:border-l-secondary">
                 <div class="flex gap-4">
                     <div class="flex flex-col justify-center">
                         <img class="rounded-full" :src="logoGasmar" width="60" height="60" alt="Logo Gasmar">
                     </div>
-                    <div>
+                    <div class="grid">
                         <p class="font-righteous text-lg">
-                            GASMAR S.A
+                            Junior
                         </p>
+                        <span class="text-sm font-bold">GASMAR S.A</span>
                         <span class="text-sm">Febrero 2020 y Febrero 2022</span>
                     </div>
                 </div>
@@ -83,10 +84,11 @@ import logoChapapp from '@/assets/img/chapapp-logo.jpeg';
                         <div class="flex flex-col justify-center">
                             <img class="rounded-full bg-black" :src="logoEkos" width="60" height="60" alt="Logo Restaurante Ekos Fusión">
                         </div>
-                    <div>
+                    <div class="grid">
                         <p class="font-righteous text-lg">
-                            Ekos Fusión
+                            Desarrollador Full-Stack
                         </p>
+                        <span class="text-sm font-bold">Ekos Fusion</span>
                         <span class="text-sm">Julio 2020 - Julio 2022</span>
                     </div>
                 </div>
@@ -99,15 +101,16 @@ import logoChapapp from '@/assets/img/chapapp-logo.jpeg';
                 </div>
                 <p>Desarrollador web para el sitio del restaurante Ekos Fusión, creando un sistema de compra y ventas online.</p>
             </div>
-            <div class="w-full p-4 bg-secondary shadow-md border-l-4 border-l-primary rounded-md dark:bg-quinary dark:border-l-secondary">
+            <div class="lg:col-span-2 xl:col-span-1 w-full p-4 bg-secondary shadow-md border-l-4 border-l-primary rounded-md dark:bg-quinary dark:border-l-secondary">
                 <div class="flex gap-4">
                     <div class="flex flex-col justify-center">
                         <img class="rounded-full" :src="logoVass" width="60" height="60" alt="Logo empresa VASS">
                     </div>
-                    <div>
+                    <div class="grid">
                         <p class="font-righteous text-lg">
-                            VASS
+                            Práctica Profesional
                         </p>
+                        <span class="text-sm font-bold">VASS</span>
                         <span class="text-sm">Enero 2021 - Febrero 2021</span>
                     </div>
                 </div>
@@ -120,15 +123,16 @@ import logoChapapp from '@/assets/img/chapapp-logo.jpeg';
                 </div>
                 <p>Me desarrolle en el área de Integration & Process, utilizando Oracle WebLogic, Oracle Service Bus (OSB) y Servicios Web SOAP.</p>
             </div>
-            <div class="md:col-span-3 w-full p-4 bg-secondary shadow-md border-l-4 border-l-primary rounded-md dark:bg-quinary dark:border-l-secondary">
+            <div class="lg:col-span-2 xl:col-span-3 w-full p-4 bg-secondary shadow-md border-l-4 border-l-primary rounded-md dark:bg-quinary dark:border-l-secondary">
                 <div class="flex gap-4">
                     <div class="flex flex-col justify-center items-center">
                         <img :src="logoChapapp" class="rounded-full" width="60" height="60" alt="Logo de la empresa Chapapp">
                     </div>
-                    <div>
+                    <div class="grid">
                         <p class="font-righteous text-lg">
-                            Chapapp
+                            Desarrollador Full-Stack
                         </p>
+                        <span class="text-sm font-bold">Chapapp</span>
                         <span class="text-sm">Agosto 2022 - Actualidad</span>
                     </div>
                 </div>

@@ -4,8 +4,8 @@ import InterestItem from '@/components/InterestItem.vue';
 </script>
 
 <template>
-    <div id="informacion-extra" class="md:grid md:grid-cols-2">
-          <div id="informacion-personal" class="w-full py-4 px-8 flex flex-col items-center space-y-2">
+    <div id="informacion-extra" class="md:grid md:grid-cols-2 px-8">
+          <div id="informacion-personal" class="w-full py-4 flex flex-col items-center space-y-2">
             <h3 class="text-2xl text-primary font-righteous dark:text-white">Información personal</h3>
             <div class="w-full flex flex-col space-y-2 text-start">
               <PersonalData id="nombre">
@@ -25,7 +25,7 @@ import InterestItem from '@/components/InterestItem.vue';
               <PersonalData id="ocupacion">
                 <template #title>Ocupación</template>
                 <div class="w-full h-auto flex flex-wrap -m-0.5 text-white">
-                  <span class="m-0.5 px-2 rounded-md bg-quaternary">Estudiante</span>
+                  <span class="m-0.5 px-2 rounded-md bg-quaternary">Ingeniero</span>
                   <span class="m-0.5 px-2 rounded-md bg-tertiary">Freelancer</span>
                   <span class="m-0.5 px-2 rounded-md bg-primary dark:bg-white dark:text-primary">Backend</span>
                   <span class="m-0.5 px-2 rounded-md bg-secondary">Frontend</span>
@@ -34,7 +34,7 @@ import InterestItem from '@/components/InterestItem.vue';
               </PersonalData>
             </div>
           </div>
-          <div id="intereses" class="w-full flex flex-col items-center py-4 px-8 space-y-2">
+          <div id="intereses" class="w-full flex flex-col items-center py-4 space-y-2">
             <h3 class="text-2xl text-primary font-righteous dark:text-white">Mis intereses</h3>
             <div class="w-full grid grid-cols-2 grid-flow-row gap-4 text-white lg:grid-cols-3">
               <InterestItem iconClass="fa-gamepad">

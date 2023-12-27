@@ -10,7 +10,6 @@ export default defineConfig({
     port: 3031
   },
   plugins: [vue(), vueJsx()],
-  // base: '/portafolio/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

@@ -64,7 +64,7 @@ function HandleDarkMode(event : Event){
       <Logo class="w-40 h-40 fill-primary transition duration-300 ease-in-out hover:fill-white dark:fill-white dark:hover:fill-gray-300"/>
       <SocialMedia/>
       <span class="mt-2 text-xs dark:text-secondary">
-      &copy; Dereck Pavez 2022. Todos los derechos reservados.
+      &copy; Dereck Pavez 2023. Todos los derechos reservados.
       </span>
     </footer>
   </main>

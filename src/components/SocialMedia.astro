@@ -1,0 +1,81 @@
+---
+import { Image } from "astro:assets";
+import instagram from "../assets/icons/instagram.svg";
+import x_logo from "../assets/icons/x.svg";
+import linkedin from "../assets/icons/linkedin.svg";
+import github from "../assets/icons/github.svg";
+import goodreads from "../assets/icons/goodreads.svg";
+---
+
+<div id="social-media" class="flex justify-center gap-2 mt-6">
+    <a
+        href="http://instagram.com/gamanathor"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <Image
+            src={instagram}
+            alt="instagram logo"
+            width={45}
+            height={45}
+            class="transition duration-200 ease-in-out hover:-translate-y-1 w-[35px]"
+            loading={"eager"}
+        />
+    </a>
+    <a
+        href="http://twitter.com/mr3dh00d"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <Image
+            src={x_logo}
+            alt="x logo"
+            width={45}
+            height={45}
+            class="transition duration-200 ease-in-out hover:-translate-y-1 w-[35px]"
+            loading={"eager"}
+        />
+    </a>
+    <a
+        href="http://linkedin.com/in/dereck-pavez/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <Image
+            src={linkedin}
+            alt="linkedin logo"
+            width={45}
+            height={45}
+            class="transition duration-200 ease-in-out hover:-translate-y-1 w-[35px]"
+            loading={"eager"}
+        />
+    </a>
+    <a
+        href="http://github.com/mr3dh00d"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <Image
+            src={github}
+            alt="github logo"
+            width={45}
+            height={45}
+            class="transition duration-200 ease-in-out hover:-translate-y-1 w-[35px]"
+            loading={"eager"}
+        />
+    </a>
+    <a
+        href="https://www.goodreads.com/user/show/172951796-dereck"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <Image
+            src={goodreads}
+            alt="goodreads logo"
+            width={45}
+            height={45}
+            class="transition duration-200 ease-in-out hover:-translate-y-1 w-[35px]"
+            loading={"eager"}
+        />
+    </a>
+</div>

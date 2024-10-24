@@ -7,7 +7,7 @@ import ExperienceCard from "../components/ExperienceCard.astro";
 ---
 
 <Layout>
-    <div class="md:grid md:grid-cols-3 md:gap-4 h-screen">
+    <div class="md:grid md:grid-cols-3 md:gap-4 dark:text-white">
         <header class="mb-12 md:mb-0">
             <div class="flex flex-col items-center rounded-md p-3 pt-12">
                 <div class="mb-4">
@@ -21,8 +21,8 @@ import ExperienceCard from "../components/ExperienceCard.astro";
                     />
                 </div>
                 <div class="flex flex-col gap-2">
-                    <h1 class="text-4xl">Soy Dereck Pavez</h1>
-                    <p class="">
+                    <h1 class="text-4xl dark:text-white">Soy Dereck Pavez</h1>
+                    <p class="dark:text-white">
                         Desarrollador de software con 4 años de experiencia en
                         tecnologías como React, React Native, Next.js, PHP,
                         Laravel, Firebase y AWS. Experto en arquitecturas y
@@ -33,38 +33,141 @@ import ExperienceCard from "../components/ExperienceCard.astro";
                 <SocialMedia />
             </div>
         </header>
-        <main class="col-span-2 flex flex-col gap-6">
-            <article class="flex flex-col p-2 gap-2">
+        <main class="col-span-2 flex flex-col gap-12">
+            <article class="flex flex-col p-2 gap-4">
                 <h2 class="text-2xl font-semibold">Sobre mí</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Temporibus corrupti minus magni provident facere dignissimos
-                    iure doloremque blanditiis doloribus nostrum qui tempore
-                    nihil nobis enim illum natus consectetur, nulla minima!
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Temporibus corrupti minus magni provident facere dignissimos
-                    iure doloremque blanditiis doloribus nostrum qui tempore
-                    nihil nobis enim illum natus consectetur, nulla minima!
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Temporibus corrupti minus magni provident facere dignissimos
-                    iure doloremque blanditiis doloribus nostrum qui tempore
-                    nihil nobis enim illum natus consectetur, nulla minima!
-                </p>
+                <div class="flex flex-col gap-1">
+                    <p>
+                        Desde los 16 años, me ha entusiasmado la programación.
+                        Comencé aprendiendo sobre estructuras de datos y
+                        programación orientada a objetos con el lenguaje Java SE
+                        en 2017, lo que me llevó a crear mi primera calculadora
+                        especializada para un juego de rol que había inventado
+                        con mis amigos. Este proyecto es un recuerdo especial
+                        que sentó las bases para considerarme hoy en día un
+                        desarrollador de software.
+                    </p>
+                    <p>
+                        Me considero una persona que entiende el esfuerzo que
+                        implica aprender una nueva tecnología y que disfruta el
+                        proceso de dominarla y crear algo completamente
+                        funcional. Siempre me enfoco en el objetivo final de mis
+                        aplicaciones, lo que me permite desarrollar soluciones
+                        útiles, enfocadas y usables. Soy autodidacta, en
+                        constante búsqueda de nuevos desafíos, y tengo una gran
+                        capacidad para aprender de manera rápida y eficiente.
+                    </p>
+                    <p>
+                        Como desarrollador, tengo experiencia trabajando en
+                        equipos multidisciplinarios, donde contribuyo a agregar
+                        valor a los productos y apoyo con ideas innovadoras y
+                        eficientes para lograr los objetivos del equipo de
+                        manera conjunta.
+                    </p>
+                </div>
             </article>
-            <article class="flex flex-col p-2 gap-2">
+            <article class="flex flex-col p-2 gap-4">
                 <div>
                     <h2 class="text-2xl font-semibold">Experiencias</h2>
                 </div>
-                <div>
+                <div class="flex flex-col gap-8">
                     <ExperienceCard
-                        title="Desarrollador de software"
-                        date={{ start: "Marzo 2018" }}
-                        description="Desarrollador de software con 4 años de experiencia en tecnologías como React, React Native, Next.js, PHP, Laravel, Firebase y AWS. Experto en arquitecturas y desarrollo full-stack con un enfoque en soluciones escalables y optimización de procesos."
+                        position="Desarrollador Full-Stack"
+                        company="AGIL"
+                        date={{ start: "ENE 2024", end: "AGO 2024" }}
+                        description="Aporté al desarrollo de una plataforma de e-commerce, contribuyendo soluciones innovadoras que optimizaron procesos en tiempo real y mejoraron la eficiencia operativa. Generé mejoras significativas en la gestión de proyectos y la resolución de incidencias."
+                        technologies={[
+                            "Next.js",
+                            "Typescript",
+                            "React",
+                            "Material UI",
+                            "Redux",
+                            "Amazon Web Services",
+                            "MySQL",
+                        ]}
                     />
+                    <ExperienceCard
+                        position="Desarrollador Full-Stack"
+                        company="CHAPAPP"
+                        date={{ start: "AGO 2022", end: "ENE 2024" }}
+                        description="Desarrollé una aplicación IoT, implementando mejoras en la experiencia del usuario y aumentando la seguridad. Contribuí a la organización del equipo, mejorando la colaboración y la velocidad de respuesta a problemas críticos."
+                        technologies={[
+                            "React Native",
+                            "Material UI",
+                            "Redux",
+                            "Node.js",
+                            "Typescript",
+                            "Firebase",
+                        ]}
+                    />
+                    <ExperienceCard
+                        position="Jefe de Proyecto"
+                        company="FREELANCE"
+                        date={{ start: "MAR 2022", end: "NOV 2022" }}
+                        description="Lideré un equipo de cinco desarrolladores, logrando una comunicación eficiente y una entrega puntual del proyecto. Implementé mejoras en la gestión del equipo, optimizando el flujo de trabajo y asegurando un desarrollo fluido."
+                        technologies={[
+                            "Laravel",
+                            "PHP",
+                            "Javascript",
+                            "Vue.js",
+                            "Tailwind CSS",
+                            "MySQL",
+                        ]}
+                        links={[
+                            {
+                                text: "Kinari Sushi Bar",
+                                url: "https://kinarisushibar.com/carta",
+                            },
+                        ]}
+                    />
+                    <ExperienceCard
+                        position="Desarrollador Backend"
+                        company="VASS"
+                        date={{ start: "ENE 2021", end: "FEB 2021" }}
+                        description="Contribuí al diseño y mantenimiento de flujos de integración, mejorando la conectividad entre sistemas empresariales. Apoyé en la optimización de procesos internos, logrando mayor eficiencia en las operaciones."
+                        technologies={[
+                            "Next.js",
+                            "Typescript",
+                            "React",
+                            "Material UI",
+                            "Redux",
+                            "Amazon Web Services",
+                            "MySQL",
+                        ]}
+                    />
+                    <ExperienceCard
+                        position="Desarrollador Full-Stack"
+                        company="FREELANCE"
+                        date={{ start: "ENE 2020", end: "DIC 2020" }}
+                        description="Desarrollé una plataforma e-commerce, gestionando de manera eficiente las necesidades del cliente y mejorando la experiencia del usuario final. Implementé soluciones escalables que contribuyeron al éxito del proyecto."
+                        technologies={[
+                            "Laravel",
+                            "PHP",
+                            "Javascript",
+                            "Vue.js",
+                            "Tailwind CSS",
+                            "MySQL"
+                        ]}
+                        links={[
+                            {
+                                text: "Ekos Fusion",
+                                url: "https://ekosfusion.cl/carta",
+                            },
+                        ]}
+                    />
+                    <!-- {
+                        Array.from({ length: 15 }).map((_, i) => (
+                        ))
+                    } -->
+                </div>
+                <div class="">
+                    <a
+                        href="/resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Ver curriculum completo
+                    </a>
                 </div>
             </article>
         </main>

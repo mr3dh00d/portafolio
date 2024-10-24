@@ -1,0 +1,1 @@
+export type LanguagesAndFrameworks = "Next.js" | "React" | "React Native" | "Typescript" | "Redux" | "Tailwind CSS" | "MySQL" | "Amazon Web Services" | "PHP" | "Laravel" | "Firebase" | "Material UI" | "Vue.js" | "Node.js" | "Javascript";

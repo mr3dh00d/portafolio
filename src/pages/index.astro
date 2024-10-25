@@ -442,11 +442,18 @@ import Kinari from "../assets/images/mockups/kinari.png";
 
         sections.forEach((section) => observer.observe(section));
 
+        const html = document.querySelector("html");
+        
+        const darkSystem = window.matchMedia("(prefers-color-scheme: dark)");
+        
+        if (darkSystem.matches && html) {
+            html.classList.add("dark");
+        }
+        
         const darkModeToggle = document.querySelector("#dark-mode-toggle");
         if (darkModeToggle) {
             darkModeToggle.addEventListener("click", () => {
                 console.log("click");
-                const html = document.querySelector("html");
                 if (html) {
                     html.classList.toggle("dark");
                 }

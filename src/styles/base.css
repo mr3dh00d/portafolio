@@ -1,6 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+html h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+html h2, html h3, html h4, html h5, html h6 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
 body::after {
     background-image:
@@ -19,46 +37,4 @@ body::after {
     opacity: 0.2;
     transform: scale(1) translateZ(0);
     filter: blur(80px) saturate(150%);
-}
-
-/* body {
-    background-image: url('https://cdn.pixabay.com/photo/2022/01/17/06/38/altai-6943982_1280.jpg');
-    background-image:
-        radial-gradient(circle at 0% 60%, rgb(255, 69, 0) 0px, transparent 25%),
-        radial-gradient(at 55% 140%, rgb(255, 255, 0) 0px, transparent 40%),
-        radial-gradient(at 10% 100%, rgb(255, 20, 147) 0px, transparent 45%),
-        radial-gradient(circle at 60% -20%, rgb(0, 255, 127) 00px, transparent 50%),
-        radial-gradient(circle at 120% 20%, rgb(30, 144, 255) 0px, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgb(148, 0, 211) 0px, transparent 50%);
-    background-size: cover;
-    background-repeat: repeat-y;
-    position: absolute;
-    content: "";
-    z-index: -2;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    opacity: 0.2;
-    transform: scale(1) translateZ(0);
-    filter: blur(80px) saturate(150%);
-} */
-
-body::after {
-    /* background-image:
-        radial-gradient(circle at 0% 60%, rgb(255, 69, 0) 0px, transparent 25%),
-        radial-gradient(at 55% 140%, rgb(255, 255, 0) 0px, transparent 40%),
-        radial-gradient(at 10% 100%, rgb(255, 20, 147) 0px, transparent 45%),
-        radial-gradient(circle at 60% -20%, rgb(0, 255, 127) 00px, transparent 50%),
-        radial-gradient(circle at 120% 20%, rgb(30, 144, 255) 0px, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgb(148, 0, 211) 0px, transparent 50%);
-    background-size: cover;
-    background-repeat: repeat-y; */
-    /* position: absolute;
-    content: "";
-    z-index: -2;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    opacity: 0.2;
-    transform: scale(1) translateZ(0); */
 }

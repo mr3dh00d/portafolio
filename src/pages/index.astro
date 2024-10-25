@@ -4,225 +4,454 @@ import Layout from "../layouts/Layout.astro";
 import Profile from "../assets/images/profile.jpg";
 import SocialMedia from "../components/SocialMedia.astro";
 import ExperienceCard from "../components/ExperienceCard.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+
+import Logo from "../components/Logo.astro";
+import GraphKingdom from "../assets/images/mockups/graph-kingdom.png";
+import EkosFusion from "../assets/images/mockups/ekos.png";
+import Kinari from "../assets/images/mockups/Kinari.png";
 ---
 
 <Layout>
-    <div class="md:grid md:grid-cols-3 md:gap-4 dark:text-white">
-        <header class="mb-12 md:mb-0">
-            <div class="flex flex-col items-center rounded-md p-3 pt-12">
-                <div class="mb-4">
-                    <Image
-                        src={Profile}
-                        alt="foto de perfil"
-                        width={300}
-                        height={300}
-                        class="rounded-full shadow-lg object-cover object-center w-40 h-40"
-                        loading={"eager"}
-                    />
+    <div
+        class="flex flex-col items-center gap-4 dark:text-white w-full px-2 xl:px-0"
+    >
+        <div class="lg:grid lg:grid-cols-3 gap-4 max-w-screen-xl">
+            <div>
+                <div class="mb-12 lg:mb-0 flex flex-col sticky top-0">
+                    <header id="profile" class="section">
+                        <div
+                            class="flex flex-col items-center rounded-md p-3 pt-12"
+                        >
+                            <div class="mb-4">
+                                <Image
+                                    src={Profile}
+                                    alt="foto de perfil"
+                                    width={300}
+                                    height={300}
+                                    class="rounded-full shadow-lg object-cover object-center w-40 h-40"
+                                    loading={"eager"}
+                                />
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h1 class="text-4xl dark:text-white">
+                                    Soy Dereck Pavez
+                                </h1>
+                                <p class="text-gray-700 dark:text-gray-400">
+                                    Desarrollador de software con 4 años de
+                                    experiencia en tecnologías como React, React
+                                    Native, Next.js, PHP, Laravel, Firebase y
+                                    AWS. Experto en arquitecturas y desarrollo
+                                    full-stack con un enfoque en soluciones
+                                    escalables y optimización de procesos.
+                                </p>
+                            </div>
+                            <SocialMedia />
+                        </div>
+                    </header>
+                    <nav class="hidden lg:block">
+                        <ul class="space-y-3">
+                            <li>
+                                <a
+                                    href="#about-me"
+                                    class="nav-link flex items-center gap-x-4 text-gray-600 group [&.active]:text-gray-950 dark:[&.active]:text-white [&.active]:font-semibold hover:text-gray-950 dark:hover:text-white hover:font-semibold transition-all ease-in-out duration-150 cursor-pointer"
+                                >
+                                    <div
+                                        class="h-[.1rem] w-8 bg-gray-600 group-[.active]:bg-gray-950 dark:group-[.active]:bg-white group-[.active]:h-[.2rem] group-[.active]:w-16 group-hover:bg-gray-950 dark:group-hover:bg-white group-hover:h-[.2rem] group-hover:w-16 transition-all ease-in-out duration-150"
+                                    >
+                                    </div>
+                                    Sobre mí
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#experience"
+                                    class="nav-link flex items-center gap-x-4 text-gray-600 group [&.active]:text-gray-950 dark:[&.active]:text-white [&.active]:font-semibold hover:text-gray-950 dark:hover:text-white hover:font-semibold transition-all ease-in-out duration-150 cursor-pointer"
+                                >
+                                    <div
+                                        class="h-[.1rem] w-8 bg-gray-600 group-[.active]:bg-gray-950 dark:group-[.active]:bg-white group-[.active]:h-[.2rem] group-[.active]:w-16 group-hover:bg-gray-950 dark:group-hover:bg-white group-hover:h-[.2rem] group-hover:w-16 transition-all ease-in-out duration-150"
+                                    >
+                                    </div>
+                                    Experiencias
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#projects"
+                                    class="nav-link flex items-center gap-x-4 text-gray-600 group [&.active]:text-gray-950 dark:[&.active]:text-white [&.active]:font-semibold hover:text-gray-950 dark:hover:text-white hover:font-semibold transition-all ease-in-out duration-150 cursor-pointer"
+                                >
+                                    <div
+                                        class="h-[.1rem] w-8 bg-gray-600 group-[.active]:bg-gray-950 dark:group-[.active]:bg-white group-[.active]:h-[.2rem] group-[.active]:w-16 group-hover:bg-gray-950 dark:group-hover:bg-white group-hover:h-[.2rem] group-hover:w-16 transition-all ease-in-out duration-150"
+                                    >
+                                    </div>
+                                    Proyectos
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <div class="flex flex-col gap-2">
-                    <h1 class="text-4xl dark:text-white">Soy Dereck Pavez</h1>
-                    <p class="dark:text-white">
-                        Desarrollador de software con 4 años de experiencia en
-                        tecnologías como React, React Native, Next.js, PHP,
-                        Laravel, Firebase y AWS. Experto en arquitecturas y
-                        desarrollo full-stack con un enfoque en soluciones
-                        escalables y optimización de procesos.
-                    </p>
-                </div>
-                <SocialMedia />
             </div>
-        </header>
-        <main class="col-span-2 flex flex-col gap-12">
-            <article class="flex flex-col p-2 gap-4">
-                <h2 class="text-2xl font-semibold">Sobre mí</h2>
-                <div class="flex flex-col gap-1">
-                    <p>
-                        Desde los 16 años, me ha entusiasmado la programación.
-                        Comencé aprendiendo sobre estructuras de datos y
-                        programación orientada a objetos con el lenguaje Java SE
-                        en 2017, lo que me llevó a crear mi primera calculadora
-                        especializada para un juego de rol que había inventado
-                        con mis amigos. Este proyecto es un recuerdo especial
-                        que sentó las bases para considerarme hoy en día un
-                        desarrollador de software.
-                    </p>
-                    <p>
-                        Me considero una persona que entiende el esfuerzo que
-                        implica aprender una nueva tecnología y que disfruta el
-                        proceso de dominarla y crear algo completamente
-                        funcional. Siempre me enfoco en el objetivo final de mis
-                        aplicaciones, lo que me permite desarrollar soluciones
-                        útiles, enfocadas y usables. Soy autodidacta, en
-                        constante búsqueda de nuevos desafíos, y tengo una gran
-                        capacidad para aprender de manera rápida y eficiente.
-                    </p>
-                    <p>
-                        Como desarrollador, tengo experiencia trabajando en
-                        equipos multidisciplinarios, donde contribuyo a agregar
-                        valor a los productos y apoyo con ideas innovadoras y
-                        eficientes para lograr los objetivos del equipo de
-                        manera conjunta.
-                    </p>
-                </div>
-            </article>
-            <article class="flex flex-col p-2 gap-4">
-                <div>
-                    <h2 class="text-2xl font-semibold">Experiencias</h2>
-                </div>
-                <div class="flex flex-col gap-8">
-                    <ExperienceCard
-                        position="Desarrollador Full-Stack"
-                        company="AGIL"
-                        date={{ start: "ENE 2024", end: "AGO 2024" }}
-                        description="Aporté al desarrollo de una plataforma de e-commerce, contribuyendo soluciones innovadoras que optimizaron procesos en tiempo real y mejoraron la eficiencia operativa. Generé mejoras significativas en la gestión de proyectos y la resolución de incidencias."
-                        technologies={[
-                            "Next.js",
-                            "Typescript",
-                            "React",
-                            "Material UI",
-                            "Redux",
-                            "Amazon Web Services",
-                            "MySQL",
-                        ]}
-                    />
-                    <ExperienceCard
-                        position="Desarrollador Full-Stack"
-                        company="CHAPAPP"
-                        date={{ start: "AGO 2022", end: "ENE 2024" }}
-                        description="Desarrollé una aplicación IoT, implementando mejoras en la experiencia del usuario y aumentando la seguridad. Contribuí a la organización del equipo, mejorando la colaboración y la velocidad de respuesta a problemas críticos."
-                        technologies={[
-                            "React Native",
-                            "Material UI",
-                            "Redux",
-                            "Node.js",
-                            "Typescript",
-                            "Firebase",
-                        ]}
-                    />
-                    <ExperienceCard
-                        position="Jefe de Proyecto"
-                        company="FREELANCE"
-                        date={{ start: "MAR 2022", end: "NOV 2022" }}
-                        description="Lideré un equipo de cinco desarrolladores, logrando una comunicación eficiente y una entrega puntual del proyecto. Implementé mejoras en la gestión del equipo, optimizando el flujo de trabajo y asegurando un desarrollo fluido."
-                        technologies={[
-                            "Laravel",
-                            "PHP",
-                            "Javascript",
-                            "Vue.js",
-                            "Tailwind CSS",
-                            "MySQL",
-                        ]}
-                        links={[
-                            {
-                                text: "Kinari Sushi Bar",
-                                url: "https://kinarisushibar.com/carta",
-                            },
-                        ]}
-                    />
-                    <ExperienceCard
-                        position="Desarrollador Backend"
-                        company="VASS"
-                        date={{ start: "ENE 2021", end: "FEB 2021" }}
-                        description="Contribuí al diseño y mantenimiento de flujos de integración, mejorando la conectividad entre sistemas empresariales. Apoyé en la optimización de procesos internos, logrando mayor eficiencia en las operaciones."
-                        technologies={[
-                            "Next.js",
-                            "Typescript",
-                            "React",
-                            "Material UI",
-                            "Redux",
-                            "Amazon Web Services",
-                            "MySQL",
-                        ]}
-                    />
-                    <ExperienceCard
-                        position="Desarrollador Full-Stack"
-                        company="FREELANCE"
-                        date={{ start: "ENE 2020", end: "DIC 2020" }}
-                        description="Desarrollé una plataforma e-commerce, gestionando de manera eficiente las necesidades del cliente y mejorando la experiencia del usuario final. Implementé soluciones escalables que contribuyeron al éxito del proyecto."
-                        technologies={[
-                            "Laravel",
-                            "PHP",
-                            "Javascript",
-                            "Vue.js",
-                            "Tailwind CSS",
-                            "MySQL"
-                        ]}
-                        links={[
-                            {
-                                text: "Ekos Fusion",
-                                url: "https://ekosfusion.cl/carta",
-                            },
-                        ]}
-                    />
-                    <!-- {
-                        Array.from({ length: 15 }).map((_, i) => (
-                        ))
-                    } -->
-                </div>
-                <div class="">
-                    <a
-                        href="/resume.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
+            <main class="col-span-2 flex flex-col gap-12 lg:mt-24">
+                <article id="about-me" class="section flex flex-col p-2 gap-4">
+                    <h2 class="text-2xl font-semibold">Sobre mí</h2>
+                    <div
+                        class="flex flex-col gap-1 text-gray-700 dark:text-gray-400"
                     >
-                        Ver curriculum completo
-                    </a>
-                </div>
-            </article>
-        </main>
-        <!-- <nav
-            id="navbar"
-            class="w-full h-auto flex fixed bottom-0 items-center justify-center pb-6"
+                        <p>
+                            Desde los 16 años, me ha entusiasmado la
+                            programación. Comencé aprendiendo sobre estructuras
+                            de datos y programación orientada a objetos con el
+                            lenguaje Java SE en 2017, lo que me llevó a crear mi
+                            primera calculadora especializada para un juego de
+                            rol que había inventado con mis amigos. Este
+                            proyecto es un recuerdo especial que sentó las bases
+                            para considerarme hoy en día un desarrollador de
+                            software.
+                        </p>
+                        <p>
+                            Me considero una persona que entiende el esfuerzo
+                            que implica aprender una nueva tecnología y que
+                            disfruta el proceso de dominarla y crear algo
+                            completamente funcional. Siempre me enfoco en el
+                            objetivo final de mis aplicaciones, lo que me
+                            permite desarrollar soluciones útiles, enfocadas y
+                            usables. Soy autodidacta, en constante búsqueda de
+                            nuevos desafíos, y tengo una gran capacidad para
+                            aprender de manera rápida y eficiente.
+                        </p>
+                        <p>
+                            Como desarrollador, tengo experiencia trabajando en
+                            equipos multidisciplinarios, donde contribuyo a
+                            agregar valor a los productos y apoyo con ideas
+                            innovadoras y eficientes para lograr los objetivos
+                            del equipo de manera conjunta.
+                        </p>
+                    </div>
+                </article>
+                <article
+                    id="experience"
+                    class="section flex flex-col p-2 gap-4"
+                >
+                    <div>
+                        <h2 class="text-2xl font-semibold">Experiencias</h2>
+                    </div>
+                    <div class="flex flex-col gap-8">
+                        <ExperienceCard
+                            position="Desarrollador Full-Stack"
+                            company="AGIL"
+                            companyUrl="https://getagil.com/"
+                            date={{ start: "ENE 2024", end: "AGO 2024" }}
+                            description="Aporté al desarrollo de una plataforma de e-commerce, contribuyendo soluciones innovadoras que optimizaron procesos en tiempo real y mejoraron la eficiencia operativa. Generé mejoras significativas en la gestión de proyectos y la resolución de incidencias."
+                            technologies={[
+                                "Next.js",
+                                "Typescript",
+                                "React",
+                                "Material UI",
+                                "Redux",
+                                "Amazon Web Services",
+                                "MySQL",
+                            ]}
+                        />
+                        <ExperienceCard
+                            position="Desarrollador Full-Stack"
+                            company="CHAPAPP"
+                            companyUrl="https://chapapp.cl/"
+                            date={{ start: "AGO 2022", end: "ENE 2024" }}
+                            description="Desarrollé una aplicación IoT, implementando mejoras en la experiencia del usuario y aumentando la seguridad. Contribuí a la organización del equipo, mejorando la colaboración y la velocidad de respuesta a problemas críticos."
+                            technologies={[
+                                "React Native",
+                                "Material UI",
+                                "Redux",
+                                "Node.js",
+                                "Typescript",
+                                "Firebase",
+                            ]}
+                        />
+                        <ExperienceCard
+                            position="Jefe de Proyecto"
+                            company="FREELANCE"
+                            date={{ start: "MAR 2022", end: "NOV 2022" }}
+                            description="Lideré un equipo de cinco desarrolladores, logrando una comunicación eficiente y una entrega puntual del proyecto. Implementé mejoras en la gestión del equipo, optimizando el flujo de trabajo y asegurando un desarrollo fluido."
+                            technologies={[
+                                "Laravel",
+                                "PHP",
+                                "Javascript",
+                                "Vue.js",
+                                "Tailwind CSS",
+                                "MySQL",
+                            ]}
+                            links={[
+                                {
+                                    text: "Kinari Sushi Bar",
+                                    url: "https://kinarisushibar.com/carta",
+                                },
+                            ]}
+                        />
+                        <ExperienceCard
+                            position="Desarrollador Backend"
+                            company="VASS"
+                            companyUrl="https://talentchile.vasscompany.com/"
+                            date={{ start: "ENE 2021", end: "FEB 2021" }}
+                            description="Contribuí al diseño y mantenimiento de flujos de integración, mejorando la conectividad entre sistemas empresariales. Apoyé en la optimización de procesos internos, logrando mayor eficiencia en las operaciones."
+                            technologies={[
+                                "Next.js",
+                                "Typescript",
+                                "React",
+                                "Material UI",
+                                "Redux",
+                                "Amazon Web Services",
+                                "MySQL",
+                            ]}
+                        />
+                        <ExperienceCard
+                            position="Desarrollador Full-Stack"
+                            company="FREELANCE"
+                            date={{ start: "ENE 2020", end: "DIC 2020" }}
+                            description="Desarrollé una plataforma e-commerce, gestionando de manera eficiente las necesidades del cliente y mejorando la experiencia del usuario final. Implementé soluciones escalables que contribuyeron al éxito del proyecto."
+                            technologies={[
+                                "Laravel",
+                                "PHP",
+                                "Javascript",
+                                "Vue.js",
+                                "Tailwind CSS",
+                                "MySQL",
+                            ]}
+                            links={[
+                                {
+                                    text: "Ekos Fusion",
+                                    url: "https://ekosfusion.cl/carta",
+                                },
+                                {
+                                    text: "Rokes",
+                                    url: "https://rokesfusion.cl/carta",
+                                },
+                            ]}
+                        />
+                    </div>
+                    <div class="flex">
+                        <a
+                            href="/resume.pdf"
+                            class="group flex gap-1 items-center justify-center text-lg text-blue-400 hover:text-blue-500 dark:text-blue-600 dark:hover:text-blue-700 transition duration-200 ease-in-out"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Ver curriculum completo
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="size-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-150 ease-in-out"
+                            >
+                                <path
+                                    d="M7 17L17 7M17 7H8M17 7V16"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+                <article id="projects" class="section flex flex-col p-2 gap-4">
+                    <div>
+                        <h2 class="text-2xl font-semibold">Proyectos</h2>
+                    </div>
+                    <div class="flex flex-col gap-8">
+                        <ProjectCard
+                            title="Graph Kingdom"
+                            description="El juego educativo enseña sobre grafos y el algoritmo de Dijkstra en un desafío ambientado en la Bohemia del siglo XV. Los jugadores deben encontrar rutas óptimas entre ciudades usando el algoritmo para resolver problemas de comercio."
+                            imageSrc={GraphKingdom}
+                            githubUrl="https://github.com/mr3dh00d/graph-kingdom"
+                        />
+                        <ProjectCard
+                            title="E-commerce para Ekos Fusion"
+                            description="E-commerce para un restaurante de sushi. Creado con Laravel, PHP, Vue.js y Tailwind CSS."
+                            imageSrc={EkosFusion}
+                            privateRepositorie
+                            previewUrl="https://ekosfusion.cl/carta"
+                        />
+                        <ProjectCard
+                            title="E-commerce para Kinari Sushi Bar"
+                            description="E-commerce para un restaurante de sushi. Creado con Laravel, PHP, Vue.js y Tailwind CSS."
+                            imageSrc={Kinari}
+                            privateRepositorie
+                            previewUrl="https://kinarisushibar.com/carta"
+                        />
+                    </div>
+                </article>
+            </main>
+        </div>
+        <footer
+            class="w-full pb-24 lg:pb-4 py-4 flex flex-col items-center bg-gray-300 dark:bg-opacity-5 bg-opacity-25 backdrop-blur-2xl"
         >
-            <div
+            <Logo />
+            <SocialMedia />
+
+            <span class="mt-2 text-xs dark:text-secondary">
+                &copy; Dereck Pavez {new Date().getFullYear()}. Todos los
+                derechos reservados.
+            </span>
+        </footer>
+        <nav
+            id="navbar"
+            class="w-full h-auto flex fixed bottom-0 items-center justify-center pb-6 lg:hidden"
+        >
+            <ul
                 class="bg-black bg-opacity-60 backdrop-blur-md rounded-full p-2 px-6 flex gap-4 text-sm text-gray-500"
             >
-                <a
-                    href="#presentacion"
-                    class="active rounded-full flex w-10 h-10 items-center justify-center transition-all duration-300 ease-in-out hover:text-white hover:bg-quaternary"
-                    @click="HandleClick"
+                <li>
+                    <a
+                        href="#profile"
+                        class="nav-link rounded-full flex w-8 h-8 items-center justify-center transition-all duration-300 ease-in-out gruop hover:text-white [&.active]:text-white"
+                    >
+                        <svg
+                            width="50"
+                            height="50"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M5 9.77746V16.2C5 17.8802 5 18.7203 5.32698 19.362C5.6146 19.9265 6.07354 20.3854 6.63803 20.673C7.27976 21 8.11984 21 9.8 21H14.2C15.8802 21 16.7202 21 17.362 20.673C17.9265 20.3854 18.3854 19.9265 18.673 19.362C19 18.7203 19 17.8802 19 16.2V5.00002M21 12L15.5668 5.96399C14.3311 4.59122 13.7133 3.90484 12.9856 3.65144C12.3466 3.42888 11.651 3.42893 11.0119 3.65159C10.2843 3.90509 9.66661 4.59157 8.43114 5.96452L3 12"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#about-me"
+                        class="nav-link rounded-full flex w-8 h-8 items-center justify-center transition-all duration-300 ease-in-out hover:text-white [&.active]:text-white"
+                    >
+                        <svg
+                            width="50"
+                            height="50"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#experience"
+                        class="nav-link rounded-full flex w-8 h-8 items-center justify-center transition-all duration-300 ease-in-out hover:text-white [&.active]:text-white"
+                    >
+                        <svg
+                            width="50"
+                            height="50"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M3 15H21M3 19H13M21 7H13M21 11H13M4.6 11H7.4C7.96005 11 8.24008 11 8.45399 10.891C8.64215 10.7951 8.79513 10.6422 8.89101 10.454C9 10.2401 9 9.96005 9 9.4V6.6C9 6.03995 9 5.75992 8.89101 5.54601C8.79513 5.35785 8.64215 5.20487 8.45399 5.10899C8.24008 5 7.96005 5 7.4 5H4.6C4.03995 5 3.75992 5 3.54601 5.10899C3.35785 5.20487 3.20487 5.35785 3.10899 5.54601C3 5.75992 3 6.03995 3 6.6V9.4C3 9.96005 3 10.2401 3.10899 10.454C3.20487 10.6422 3.35785 10.7951 3.54601 10.891C3.75992 11 4.03995 11 4.6 11Z"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#projects"
+                        class="nav-link rounded-full flex w-8 h-8 items-center justify-center transition-all duration-300 ease-in-out hover:text-white [&.active]:text-white"
+                    >
+                        <svg
+                            width="50"
+                            height="50"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M7 8L3 11.6923L7 16M17 8L21 11.6923L17 16M14 4L10 20"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li
+                    id="dark-mode-toggle"
+                    class="rounded-full flex w-8 h-8 items-center justify-center transition-all duration-300 ease-in-out dark:text-white hover:text-white hover:cursor-pointer"
                 >
-                    <i class="fa-solid fa-house"></i>
-                </a>
-                <a
-                    href="#informacion-personal"
-                    class="rounded-full flex w-10 h-10 items-center justify-center transition-all duration-300 ease-in-out hover:text-white hover:bg-quaternary"
-                    @click="HandleClick"
-                >
-                    <i class="fa-solid fa-user"></i>
-                </a>
-                <a
-                    href="#habilidades"
-                    class="rounded-full flex w-10 h-10 items-center justify-center transition-all duration-300 ease-in-out hover:text-white hover:bg-quaternary"
-                    @click="HandleClick"
-                >
-                    <i class="fa-solid fa-code"></i>
-                </a>
-                <a
-                    href="#educacion-experiencia"
-                    class="rounded-full flex w-10 h-10 items-center justify-center transition-all duration-300 ease-in-out hover:text-white hover:bg-quaternary"
-                    @click="HandleClick"
-                >
-                    <i class="fa-solid fa-book"></i>
-                </a>
-                <a
-                    href="#contacto"
-                    class="rounded-full flex w-10 h-10 items-center justify-center transition-all duration-300 ease-in-out hover:text-white hover:bg-quaternary"
-                    @click="HandleClick"
-                >
-                    <i class="fa-solid fa-phone"></i>
-                </a>
-                <div
-                    class="rounded-full flex w-10 h-10 items-center justify-center transition-all duration-300 ease-in-out hover:text-white hover:bg-quaternary active"
-                    @click="HandleDarkMode"
-                >
-                    <i class="fa-solid fa-moon"></i>
-                </div>
-            </div>
-        </nav> -->
-        <!-- <footer class="bg-gray-400">
-            <p>Footer</p>
-        </footer> -->
+                    <svg
+                        width="50"
+                        height="50"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </li>
+            </ul>
+        </nav>
     </div>
 </Layout>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll(".section");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        const thresholdMobile = [0.25, 1];
+        const thresholdDesktop = 0.5;
+
+        const isMobile = window.innerWidth < 768;
+
+        const options = {
+            root: null,
+            threshold: isMobile ? thresholdMobile : thresholdDesktop,
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                const sectionId = entry.target.id;
+                const navLink = document.querySelectorAll(
+                    `a[href="#${sectionId}"]`,
+                );
+
+                if (entry.isIntersecting) {
+                    navLinks.forEach((link) => link.classList.remove("active"));
+                    if (navLink) {
+                        navLink.forEach((link) => link.classList.add("active"));
+                    }
+                }
+            });
+        }, options);
+
+        sections.forEach((section) => observer.observe(section));
+
+        const darkModeToggle = document.querySelector("#dark-mode-toggle");
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener("click", () => {
+                console.log("click");
+                const html = document.querySelector("html");
+                if (html) {
+                    html.classList.toggle("dark");
+                }
+
+            });
+        }
+    });
+</script>

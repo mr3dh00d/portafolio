@@ -7,7 +7,7 @@ interface Props {
     imageSrc: ImageMetadata;
     githubUrl?: string;
     previewUrl?: string;
-    privateRepositorie?: boolean;
+    privateRepository?: boolean;
 }
 
 const {
@@ -16,7 +16,7 @@ const {
     imageSrc,
     githubUrl,
     previewUrl,
-    privateRepositorie,
+    privateRepository,
 } = Astro.props;
 ---
 
@@ -33,7 +33,7 @@ const {
                 src={imageSrc}
                 class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
                 loading="lazy"
-                alt="Graph Kingdom Mockup"
+                alt={`Mockup de ${title}`}
             />
         </div>
     </div>
@@ -47,7 +47,7 @@ const {
             </div>
             <footer class="flex items-end justify-start gap-x-2 mt-2">
                 {
-                    privateRepositorie && (
+                    privateRepository && (
                         <span class="text-sm inline-flex bg-slate-800 text-white items-center justify-center gap-2 px-2 py-1 space-x-2 transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md max-w-fit rounded-xl focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
                             <svg
                                 class="size-5"
